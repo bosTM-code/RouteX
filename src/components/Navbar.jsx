@@ -50,9 +50,9 @@ function Navbar() {
             <div className="flex items-center justify-between mx-auto w-4/5 py-4 sm:py-8 md:py-11 lg:w-11/12">
 
                 {/* LOGO IMG */}
-                <div className="">
+                <Link to="/">
                     <img src={LogoSvg} alt="Logo" className="w-[125px] sm:w-[150px] md:w-[200px] lg:w-[125px] xl:w-[150px]"/>
-                </div>
+                </Link>
                 
                 {/* NAVIGATION DESCTOP */}
                 <div className="hidden lg:flex items-center justify-between gap-5">
