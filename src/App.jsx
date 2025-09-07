@@ -5,7 +5,7 @@ import Error from "./pages/Error";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/RouteX">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="*" element={<Error />} />
