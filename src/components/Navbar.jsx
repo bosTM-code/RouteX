@@ -43,7 +43,7 @@ function Navbar() {
   }
 
   return (
-    <div className="sticky top-0 left-0 w-full bg-white z-50">
+    <div className="top-0 left-0 w-full bg-white z-50">
       <div className="flex items-center justify-between mx-auto w-4/5 py-4 sm:py-8 md:py-11 lg:w-11/12">
         {/* LOGO IMG */}
         <Link to="/">
@@ -67,7 +67,7 @@ function Navbar() {
             </div>
           ))}
         </div>
-        <button className="hidden lg:flex items-center bg-lightGreen px-5 py-4 rounded-full text-sm text-white xl:text-base gap-2">
+        <button className="hidden lg:flex items-center bg-lightGreen px-5 py-4 rounded-full text-sm text-white xl:text-base gap-2 hover:bg-green-600 transition">
           <div className="">Get An Appointment</div>
           <img src={ArrowRight} alt="arrowright" />
         </button>
@@ -75,7 +75,7 @@ function Navbar() {
         {/* BURGER MOBILE */}
 
         <button
-          className="lg:hidden z-50 flex flex-col justify-between w-12 sm:w-14 md:w-16 h-10 sm:h-11 md:h-[48px]"
+          className="lg:hidden z-[1000] flex flex-col justify-between w-12 sm:w-14 md:w-16 h-10 sm:h-11 md:h-[48px]"
           onClick={openBurger}
         >
           <span
@@ -103,7 +103,7 @@ function Navbar() {
       {/* BACKDROP GREY BG BEHIND MENU*/}
 
       <div
-        className={`fixed inset-0 bg-black/50 transition-opacity duration-500 ${
+        className={`fixed inset-0 bg-black/50 transition-opacity duration-500 z-[999] ${
           mobileOpen ? "opacity-100 visible" : "opacity-0 invisible"
         } lg:hidden`}
         onClick={openBurger}
@@ -112,7 +112,7 @@ function Navbar() {
       {/* MOBILE ON CLICK NAV ON CLICK SLIDE ANIMATION*/}
 
       <div
-        className={`fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg flex flex-col items-start gap-5 p-10 transition-transform duration-500 ease-in-out lg:hidden ${
+        className={`fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg flex flex-col items-start gap-5 p-10 transition-transform duration-500 ease-in-out lg:hidden z-[999] ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
