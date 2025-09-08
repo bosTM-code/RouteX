@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import LogoSvg from "../assets/Logo.svg";
-import Burger from "../assets/burger.svg";
 import ArrowDown from "../assets/ArrowDown.svg";
 import ArrowRight from "../assets/arrowRight.svg";
 
@@ -44,7 +43,7 @@ function Navbar() {
   }
 
   return (
-    <div>
+    <div className="sticky top-0 left-0 w-full bg-white z-50">
       <div className="flex items-center justify-between mx-auto w-4/5 py-4 sm:py-8 md:py-11 lg:w-11/12">
         {/* LOGO IMG */}
         <Link to="/">
