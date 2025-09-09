@@ -10,7 +10,7 @@ function HomePage() {
       <Navbar />
       <Hero />
       <FeatureSection />
-      {/* <DreamSection /> */}
+      <DreamSection />
       <Footer />
     </div>
   );
