@@ -1,14 +1,15 @@
 import Navbar from "../components/Navbar";
-import Header from "../components/Header";
-import Test from "../components/Test";
 import FeatureSection from "../components/FeatureSection";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
 function HomePage() {
   return (
     <div>
       <Navbar />
-      <Test />
+      <Hero />
       <FeatureSection />
+      <Footer />
     </div>
   );
 }
