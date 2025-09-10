@@ -3,6 +3,7 @@ import FeatureSection from "../components/FeatureSection";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import DreamSection from "../components/DreamSection";
+import Sponsers from "../components/Sponsers";
 
 function HomePage() {
   return (
@@ -11,6 +12,7 @@ function HomePage() {
       <Hero />
       <FeatureSection />
       <DreamSection />
+      <Sponsers />
       <Footer />
     </div>
   );
