@@ -4,7 +4,7 @@ import Tower from "../assets/tower.svg";
 
 function Hero() {
   return (
-    <div className="relative w-11/12 bg-darkGreen rounded-3xl mx-auto px-6 py-12 sm:px-10 sm:py-16 md:px-16 md:py-24 lg:px-18 lg:py-32 flex flex-col lg:flex-row items-center lg:items-center gap-10 lg:gap-16 overflow-hidden">
+    <section className="relative w-11/12 bg-darkGreen rounded-3xl mx-auto px-6 py-12 sm:px-10 sm:py-16 md:px-16 md:py-24 lg:px-18 lg:py-32 flex flex-col lg:flex-row items-center lg:items-center gap-10 lg:gap-16 overflow-hidden">
       {/* DECORATIVE IMAGE (BACKGROUND) */}
       <img
         src={Tower}
@@ -44,7 +44,7 @@ function Hero() {
           className="max-w-[280px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[375px] xl:max-w-[500px] rounded-3xl object-contain"
         />
       </div>
-    </div>
+    </section>
   );
 }
 

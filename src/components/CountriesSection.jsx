@@ -5,7 +5,7 @@ import ArrowRight from "../assets/arrowRight.svg";
 
 function CountriesSection() {
   return (
-    <div className=" w-11/12 bg-darkGreen rounded-3xl mx-auto px-6 py-12 sm:px-10 sm:py-16 md:px-16 md:py-24 lg:px-18 lg:py-32 overflow-hidden my-14">
+    <section className=" w-11/12 bg-darkGreen rounded-3xl mx-auto px-6 py-12 sm:px-10 sm:py-16 md:px-16 md:py-24 lg:px-18 lg:py-32 overflow-hidden my-14">
       {/* UPPER */}
       <div className="w-[71.66%] mx-auto flex justify-between mb-8 md:mb-14 ">
         <div className="text-white">
@@ -117,7 +117,7 @@ function CountriesSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

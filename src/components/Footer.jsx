@@ -59,7 +59,7 @@ export default function Footer() {
             <img
               src={Map}
               alt=""
-              className="pointer-events-none select-none absolute inset-0 z-0
+              className=" absolute inset-0 z-0
                w-full h-full object-cover opacity-60"
             />
             <div className="relative z-10 grid gap-12 pt-16 pb-24 sm:grid-cols-2 lg:grid-cols-4 lg:justify-items-center">

@@ -31,7 +31,7 @@ const countryData = [
 
 function AvailibleCountriesSection() {
   return (
-    <div className="w-[70%] mx-auto mb-10 ">
+    <section className="w-[70%] mx-auto mb-10 ">
       <div className="flex items-center gap-2">
         <p className="uppercase text-darkGreen font-medium text-base">
           Availible Countries
@@ -53,7 +53,7 @@ function AvailibleCountriesSection() {
           <CountryCard key={item.title} {...item} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
