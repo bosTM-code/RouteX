@@ -6,6 +6,7 @@ import DreamSection from "../components/DreamSection";
 import Sponsers from "../components/Sponsers";
 import CountriesSection from "../components/CountriesSection";
 import VisaSection from "../components/VisaSection";
+import AvailibleCountriesSection from "../components/AvailibleCountriesSection";
 
 function HomePage() {
   return (
@@ -17,6 +18,7 @@ function HomePage() {
       <Sponsers />
       <CountriesSection />
       <VisaSection />
+      <AvailibleCountriesSection />
       <Footer />
     </div>
   );

@@ -23,7 +23,7 @@ function DreamSection() {
                 alt=""
                 className="w-full h-full object-cover rounded-xl sm:rounded-2xl"
               />
-              <div className="pointer-events-none absolute inset-2 sm:inset-3 rounded-xl sm:rounded-2xl border-2 border-[#86D946]" />
+              <div className="absolute inset-2 sm:inset-3 rounded-xl sm:rounded-2xl border-2 border-[#86D946]" />
             </div>
             <div className="flex justify-center">
               <div className="relative">
