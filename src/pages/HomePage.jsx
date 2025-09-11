@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import DreamSection from "../components/DreamSection";
 import Sponsers from "../components/Sponsers";
 import CountriesSection from "../components/CountriesSection";
+import VisaSection from "../components/VisaSection";
 
 function HomePage() {
   return (
@@ -15,6 +16,7 @@ function HomePage() {
       <DreamSection />
       <Sponsers />
       <CountriesSection />
+      <VisaSection />
       <Footer />
     </div>
   );
