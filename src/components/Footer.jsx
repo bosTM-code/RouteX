@@ -144,7 +144,7 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="py-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
             <p className="mb-4 md:mb-0">
-              © Yoursitename 2024 | All Rights Reserved
+              © Berezhnyi Sviatoslas 2025 | All Rights Reserved
             </p>
             <div className="flex gap-6">
               <Link to="#" className="hover:text-white">

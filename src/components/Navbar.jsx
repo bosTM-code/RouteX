@@ -1,72 +1,81 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import LogoSvg from "../assets/Logo.svg";
+// import LogoSvg from "../assets/Logo.svg";
+import LogoMin from "../assets/Logo_min.svg";
 import ArrowDown from "../assets/ArrowDown.svg";
 import ArrowRight from "../assets/arrowRight.svg";
 
 const navLinks = [
   {
     to: "/",
-    label: "home",
+    label: "Головна",
   },
   {
     to: "/about",
-    label: "about us",
+    label: "Про нас",
   },
   {
     to: "/service",
-    label: "services",
+    label: "Послуги",
   },
   {
     to: "/project",
-    label: "projects",
+    label: "проєкти",
   },
   {
     to: "/blog",
-    label: "blog",
+    label: "Блог",
   },
   {
     to: "/page",
-    label: "page",
+    label: "Сторінки",
   },
   {
     to: "/contact",
-    label: "contact",
+    label: "Контакти",
   },
 ];
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  function openBurger() {
-    return setMobileOpen(!mobileOpen);
-  }
+  const openBurger = () => {
+    setMobileOpen((prev) => !prev);
+  };
 
   return (
-    <div className="top-0 left-0 w-full bg-white z-50">
+    <header className="fixed top-0 left-0 w-full bg-white z-50">
       <div className="flex items-center justify-between mx-auto w-4/5 py-4 sm:py-8 md:py-11 lg:w-11/12">
-        {/* LOGO IMG */}
+        {/* LOGO */}
         <Link to="/">
-          <img
-            src={LogoSvg}
-            alt="Logo"
-            className="w-[125px] sm:w-[150px] md:w-[200px] lg:w-[125px] xl:w-[150px]"
-          />
+          <div className="flex items-center space-x-1 group cursor-pointer">
+            <div>
+              <img
+                src={LogoMin}
+                alt="RouteX Logo"
+                className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10"
+              />
+            </div>
+            <span className="text-xl sm:text-2xl md:text-3xl font-bold text-darkGreen hover:text-green-700 transition-colors duration-200">
+              RouteX
+            </span>
+          </div>
         </Link>
 
         {/* NAVIGATION DESCTOP */}
-        <div className="hidden lg:flex items-center justify-between gap-5">
+        <nav className="hidden lg:flex items-center justify-between gap-5">
           {navLinks.map((item) => (
-            <div className="flex items-center gap-1 uppercase text-sm font-medium xl:text-base">
-              <NavLink to={item.to} key={item.label}>
-                {item.label}
-              </NavLink>
+            <div
+              key={item.to}
+              className="flex items-center gap-0 uppercase text-sm text-darkGreen font-semibold xl:text-base hover:text-green-700 transition-colors duration-200"
+            >
+              <NavLink to={item.to}>{item.label}</NavLink>
               <button>
                 <img src={ArrowDown} alt="arrowdown" />
               </button>
             </div>
           ))}
-        </div>
+        </nav>
         <button className="hidden lg:flex items-center bg-lightGreen px-5 py-4 rounded-full text-sm text-white xl:text-base gap-2 hover:bg-green-600 transition">
           <div className="">Get An Appointment</div>
           <img src={ArrowRight} alt="arrowright" />
@@ -75,23 +84,23 @@ function Navbar() {
         {/* BURGER MOBILE */}
 
         <button
-          className="lg:hidden z-[1000] flex flex-col justify-between w-12 sm:w-14 md:w-16 h-10 sm:h-11 md:h-[48px]"
+          className="lg:hidden z-[1000] flex flex-col justify-between w-10 sm:w-12 md:w-14 h-8 sm:h-10 md:h-12"
           onClick={openBurger}
         >
           <span
-            className={`h-1.5 w-full bg-black rounded-full transition-all duration-300 ${
+            className={`h-1.5 w-full bg-darkGreen rounded-full transition-all duration-300 ${
               mobileOpen
-                ? "rotate-45 translate-y-[17px] sm:translate-y-[19.65px] md:translate-y-[21.5px]"
+                ? "rotate-45 translate-y-2 sm:translate-y-3.5 md:translate-y-5"
                 : ""
             }`}
           />
           <span
-            className={`h-1.5 w-full bg-black rounded transition-all duration-300 ${
+            className={`h-1.5 w-full bg-darkGreen rounded transition-all duration-300 ${
               mobileOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`h-1.5 w-full bg-black rounded transition-all duration-300 ${
+            className={`h-1.5 w-full bg-darkGreen rounded transition-all duration-300 ${
               mobileOpen
                 ? "-rotate-45 -translate-y-[17px] sm:-translate-y-[19.65px] md:-translate-y-[21.5px]"
                 : ""
@@ -117,14 +126,17 @@ function Navbar() {
         }`}
       >
         {navLinks.map((item) => (
-          <div key={item.label} className="uppercase text-sm font-medium">
+          <div
+            key={item.to}
+            className="uppercase text-sm font-semibold text-darkGreen"
+          >
             <NavLink to={item.to} onClick={openBurger}>
               {item.label}
             </NavLink>
           </div>
         ))}
       </div>
-    </div>
+    </header>
   );
 }
 

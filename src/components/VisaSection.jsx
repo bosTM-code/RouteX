@@ -37,7 +37,7 @@ function VisaSection() {
       <div>
         <div>
           <p></p>
-          <img src="" alt="" />
+          {/* <img src="" alt="" /> */}
         </div>
       </div>
       <div className="grid 2xl:grid-cols-4 gap-4">
