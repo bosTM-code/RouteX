@@ -12,41 +12,45 @@ import Telegram from "../assets/Telegram.svg";
 import Map from "../assets/Map.svg";
 
 const services = [
-  { text: "Mistakes To Avoid", link: "" },
-  { text: "Your Startup", link: "" },
-  { text: "Knew About Fonts", link: "" },
-  { text: "Knew About Fonts", link: "" },
+  { text: "Стратегічні сесії для бізнесу", link: "" },
+  { text: "Аудит бізнес-процесів", link: "" },
+  { text: "Юридичний супровід релокації", link: "" },
+  { text: "Податкове планування", link: "" },
 ];
 
 const links = [
-  { text: "Latest News", link: "" },
-  { text: "Careers", link: "" },
-  { text: "General Inquiries", link: "" },
-  { text: "Case Studies", link: "" },
+  { text: "Останні новини блогу", link: "" },
+  { text: "Вакансії", link: "" },
+  { text: "Загальні запитання", link: "" },
+  { text: "Кейси клієнтів", link: "" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-darkGreen">
+    <footer className="bg-darkGreen text-sm">
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 py-12">
           {/* CTA #1 */}
           <div className="flex items-start gap-6">
             <div className="w-20 h-20 rounded-full bg-lightGreen flex items-center justify-center shrink-0">
-              <img src={WalletIcon} alt="" className="w-10 h-10" />
+              <img
+                src={WalletIcon}
+                alt="Іконка фінансової підтримки"
+                className="w-10 h-10"
+              />
             </div>
             <h3 className="text-white font-bold text-2xl sm:text-3xl leading-snug">
-              Need Any Support For Tour And Visa?
+              Потрібна допомога з візою або консалтингом для бізнесу?
             </h3>
           </div>
 
-          {/* CTA #2 (with border on desktop) */}
+          {/* CTA #2 */}
           <div className="flex items-start gap-6 md:border-l md:border-white/10 md:pl-8">
             <div className="w-20 h-20 rounded-full bg-lightGreen flex items-center justify-center shrink-0">
-              <img src={GlobeIcon} alt="" className="w-10 h-10" />
+              <img src={GlobeIcon} alt="Іконка глобусу" className="w-10 h-10" />
             </div>
             <h3 className="text-white font-bold text-2xl sm:text-3xl leading-snug">
-              Are You Ready For Get Started Travelling?
+              Готові розпочати релокацію чи масштабування бізнесу?
             </h3>
           </div>
         </div>
@@ -58,42 +62,75 @@ export default function Footer() {
           <div>
             <img
               src={Map}
-              alt=""
-              className=" absolute inset-0 z-0
-               w-full h-full object-cover opacity-60"
+              alt="Карта світу фон"
+              className="absolute inset-0 z-0
+               w-full h-full object-cover opacity-60 pointer-events-none"
             />
             <div className="relative z-10 grid gap-12 pt-16 pb-24 sm:grid-cols-2 lg:grid-cols-4 lg:justify-items-center">
               {/* Column 1: Logo + text + socials */}
               <div>
-                <img src={LogoGreen} alt="RouteX" className="w-40 mb-6" />
+                <img
+                  src={LogoGreen}
+                  alt="RouteX Consulting логотип"
+                  className="w-40 mb-6"
+                />
                 <p className="text-gray-300 text-sm mb-6 max-w-xs">
-                  Corporate business typically refers to large-scale mansolat
-                  enterprises or organizat
+                  RouteX Consulting — консалтинговий центр, який допомагає
+                  підприємцям та спеціалістам з питань релокації, відкриття
+                  компаній за кордоном та податкового планування.
                 </p>
                 <div className="flex gap-6 text-white">
-                  <a href="https://www.facebook.com/" aria-label="Facebook">
-                    <img src={Facebook} alt="" />
+                  <a
+                    href="https://www.facebook.com/"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={Facebook} alt="Іконка Facebook" />
                   </a>
-                  <a href="https://www.instagram.com/" aria-label="Instagram">
-                    <img src={Instagram} alt="" />
+                  <a
+                    href="https://www.instagram.com/"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={Instagram} alt="Іконка Інстаграм" />
                   </a>
-                  <a href="https://www.twitter.com/" aria-label="X/Twitter">
-                    <img src={X} alt="" />
+                  <a
+                    href="https://www.twitter.com/"
+                    aria-label="X/Twitter"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={X} alt="Іконка Твітер" />
                   </a>
-                  <a href="https://www.linkedin.com/">
-                    <img src={LinkedIn} alt="" />
+                  <a
+                    href="https://www.linkedin.com/"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={LinkedIn} alt="Іконка Linkedin" />
                   </a>
                 </div>
               </div>
 
               {/* Column 2: Services */}
               <div>
-                <h4 className="text-white font-semibold mb-5">Services</h4>
+                <h4 className="text-white font-semibold mb-5">Послуги</h4>
                 <div className="space-y-3 text-gray-300 text-sm">
                   {services.map((item) => (
-                    <a key={item.text} href={item.link} className="block">
+                    <a
+                      key={item.text}
+                      href={item.link || "#"}
+                      className="block"
+                    >
                       <div className="flex items-center gap-2">
-                        <img src={CheckGreen} alt="" />
+                        <img
+                          src={CheckGreen}
+                          alt="Позначка"
+                          className="w-4 h-4"
+                        />
                         {item.text}
                       </div>
                     </a>
@@ -103,12 +140,22 @@ export default function Footer() {
 
               {/* Column 3: Useful Link */}
               <div>
-                <h4 className="text-white font-semibold mb-5">Useful Link</h4>
+                <h4 className="text-white font-semibold mb-5">
+                  Корисні посилання
+                </h4>
                 <div className="space-y-3 text-gray-300 text-sm">
                   {links.map((item) => (
-                    <a key={item.text} href={item.link} className="block">
+                    <a
+                      key={item.text}
+                      href={item.link || "#"}
+                      className="block"
+                    >
                       <div className="flex items-center gap-2">
-                        <img src={ArrowGreen} alt="" />
+                        <img
+                          src={ArrowGreen}
+                          alt="Стрілка"
+                          className="w-4 h-4"
+                        />
                         {item.text}
                       </div>
                     </a>
@@ -119,21 +166,30 @@ export default function Footer() {
               {/* Column 4: Subscribe to Newsletter */}
               <div>
                 <h4 className="text-white font-semibold mb-5">
-                  Subscribe Our Newsletter
+                  Підписка на оновлення
                 </h4>
                 <p className="text-gray-300 text-sm mb-4 max-w-xs">
-                  Corporate business typically refers to large-scale mansola it.
+                  Отримуйте оновлення про зміни в міграційному законодавстві та
+                  нові можливості для бізнесу.
                 </p>
-                <div className="flex overflow-hidden max-w-sm">
+                <form
+                  className="flex overflow-hidden max-w-sm"
+                  onSubmit={(e) => e.preventDefault()}
+                >
                   <input
                     type="email"
-                    placeholder="Enter Email"
-                    className="flex-1 px-5 py-3 text-sm bg-black text-white placeholder-gray-400 focus:outline-none rounded-full"
+                    placeholder="Ваша e-mail адреса"
+                    className="flex-1 px-5 py-3 text-sm bg-black/80 text-white placeholder-gray-400 focus:outline-none rounded-full"
+                    required
                   />
-                  <button className="bg-lightGreen text-white p-4 rounded-full shrink-0 -translate-x-9">
-                    <img src={Telegram} alt="" />
+                  <button
+                    type="submit"
+                    className="bg-lightGreen text-white p-4 rounded-full shrink-0 -translate-x-9 hover:bg-green-500 transition"
+                    aria-label="Підписатися"
+                  >
+                    <img src={Telegram} alt="Надіслати" />
                   </button>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -142,19 +198,19 @@ export default function Footer() {
           <div className="w-screen border-t border-white/10 relative left-1/2 right-1/2 -ml-[50vw]" />
 
           {/* Bottom bar */}
-          <div className="py-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-            <p className="mb-4 md:mb-0">
-              © Berezhnyi Sviatoslas 2025 | All Rights Reserved
+          <div className="py-6 flex flex-col md:flex-row justify-between items-center text-gray-300 text-xs sm:text-sm gap-3">
+            <p className="mb-1 md:mb-0">
+              © Святослав Бережний 2025 | Усі права захищено
             </p>
-            <div className="flex gap-6">
-              <Link to="#" className="hover:text-white">
-                Terms & Condition
-              </Link>
-              <Link to="#" className="hover:text-white">
-                Privacy Policy
-              </Link>
-              <Link to="#" className="hover:text-white">
-                Contact Us
+            <div className="flex gap-4">
+              <a href="#" className="hover:text-white">
+                Умови використання
+              </a>
+              <a href="#" className="hover:text-white">
+                Політика конфіденційності
+              </a>
+              <Link to="/contact" className="hover:text-white">
+                Зв&apos;язатися з нами
               </Link>
             </div>
           </div>
