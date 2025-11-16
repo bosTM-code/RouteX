@@ -11,10 +11,10 @@ function App() {
     <div className="min-h-screen flex flex-col bg-slate-50">
       <Navbar />
 
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-16 sm:pt-20 md:pt-24 lg:pt-[120.63px]">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
+          {/* <Route path="/about" element={<About />} /> */}
           {/* <Route path="/service" element={<Service />} /> */}
           <Route path="*" element={<Error />} />
         </Routes>

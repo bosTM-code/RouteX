@@ -1,10 +1,4 @@
-import Navbar from "../components/Navbar";
-
 function About() {
-  return (
-    <div className="overflow-x-hidden">
-      <Navbar />
-    </div>
-  );
+  return <div></div>;
 }
 export default About;

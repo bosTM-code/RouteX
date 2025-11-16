@@ -6,18 +6,18 @@ import Ticket from "../assets/Ticket.svg";
 const features = [
   {
     icon: Globe,
-    title: "Food and Wine Tours",
-    text: "Dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus nun Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus nunc. Duis egestas ac ",
+    title: "Міжнародний розвиток бізнесу",
+    text: "Аналіз ринків, вибір оптимальної країни для виходу, підбір юридичної форми та базових вимог до компанії.",
   },
   {
     icon: Visa,
-    title: "Travel Opportunities",
-    text: "Dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus nun Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus nunc. Duis egestas ac ",
+    title: "Візова підтримка для підприємців",
+    text: "Пояснюємо вимоги до віз, готуємо пакет документів, допомагаємо уникнути типових відмов і затримок.",
   },
   {
     icon: Ticket,
-    title: "Solo Travel Planning",
-    text: "Dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus nun Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus nunc. Duis egestas ac ",
+    title: "Планування релокації команди",
+    text: "Структуруємо етапи переїзду, ризики, податкові наслідки та організацію роботи після релокації.",
   },
 ];
 
@@ -26,8 +26,8 @@ function FeatureSection() {
     <section className=" py-12 sm:py-16">
       <div className="w-11/12 mx-auto">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f, i) => (
-            <FeatureCard key={i} {...f} />
+          {features.map((f) => (
+            <FeatureCard key={f.title} {...f} />
           ))}
         </div>
       </div>

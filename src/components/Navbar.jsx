@@ -45,7 +45,7 @@ function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white z-50">
-      <div className="flex items-center justify-between mx-auto w-4/5 py-4 sm:py-8 md:py-11 lg:w-11/12">
+      <div className="flex items-center justify-between mx-auto w-4/5 py-4 sm:py-4 md:py-5 lg:py-6 lg:w-11/12">
         {/* LOGO */}
         <Link to="/">
           <div className="flex items-center space-x-1 group cursor-pointer">

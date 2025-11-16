@@ -6,7 +6,7 @@ function FeatureCard({ icon, title, text }) {
           <img src={icon} alt={title} className="w-10 h-10 text-white" />
         )}
       </div>
-      <h3 className="text-lg font-bold text-green-900">{title}</h3>
+      <h3 className="text-lg font-bold text-darkGreen">{title}</h3>
       <p className="text-gray-600 text-16px leading-relaxed">{text}</p>
     </div>
   );

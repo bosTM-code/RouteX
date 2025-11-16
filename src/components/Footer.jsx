@@ -203,12 +203,12 @@ export default function Footer() {
               © Святослав Бережний 2025 | Усі права захищено
             </p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-white">
+              <Link to="#" className="hover:text-white">
                 Умови використання
-              </a>
-              <a href="#" className="hover:text-white">
+              </Link>
+              <Link to="#" className="hover:text-white">
                 Політика конфіденційності
-              </a>
+              </Link>
               <Link to="/contact" className="hover:text-white">
                 Зв&apos;язатися з нами
               </Link>
