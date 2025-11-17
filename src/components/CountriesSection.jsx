@@ -5,27 +5,33 @@ import ArrowRight from "../assets/arrowRight.svg";
 
 function CountriesSection() {
   return (
-    <section className=" w-11/12 bg-darkGreen rounded-3xl mx-auto px-6 py-12 sm:px-10 sm:py-16 md:px-16 md:py-24 lg:px-18 lg:py-32 overflow-hidden my-14">
+    <section className=" w-11/12 bg-darkGreen rounded-3xl mx-auto px-6 py-12 sm:px-10 sm:py-16 md:px-16 md:py-24 lg:px-20 lg:py-32 overflow-hidden my-14">
       {/* UPPER */}
       <div className="w-[71.66%] mx-auto flex justify-between mb-8 md:mb-14 ">
         <div className="text-white">
           <div className="flex items-center gap-1 justify-center md:justify-normal">
-            <img src={PassWhite} alt="" />
+            <img src={PassWhite} alt="Іконка паспорта" />
             <p className="uppercase text-xl font-bold md:font-normal md:text-sm">
-              Our Countries
+              Наші напрямки
             </p>
           </div>
 
           <h3 className="w-2/3 text-[1.05rem] md:text-[1.25rem] xl:text-[3rem] md:font-bold mx-auto md:mx-0">
-            Making Memories Around World Unforgettable
+            Країни, з якими ми працюємо
           </h3>
         </div>
         <div className="self-end hidden md:flex flex-shrink-0 gap-3">
-          <button className=" p-6 bg-darkGreen rounded-full border border-white hover:bg-lightGreen hover:border-lightGreen">
-            <img src={ArrowLeftSmall} alt="" />
+          <button
+            className=" p-6 bg-darkGreen rounded-full border border-white hover:bg-lightGreen hover:border-lightGreen transition"
+            aria-label="Наступний напрямок"
+          >
+            <img src={ArrowLeftSmall} alt="Стрілка вліво" />
           </button>
-          <button className=" p-6 bg-darkGreen rounded-full border border-white hover:bg-lightGreen hover:border-lightGreen">
-            <img src={ArrowRightSmall} alt="" />
+          <button
+            className=" p-6 bg-darkGreen rounded-full border border-white hover:bg-lightGreen hover:border-lightGreen transition"
+            aria-label="Попередній напрямок"
+          >
+            <img src={ArrowRightSmall} alt="Стрілка вправо" />
           </button>
         </div>
       </div>
@@ -37,14 +43,12 @@ function CountriesSection() {
             <div className="inline-block p-6 border border-lightGreen rounded-full" />
           </div>
           <div className="hidden">
-            <h6>Working Visa</h6>
-            <p>
-              Lorem Ipsum is simply dummy text the printing and provide best
-              visa ever
+            <h3>Робоча віза</h3>
+            <p className="text-white/80 text-sm">
+              Консультації та супровід для отримання робочої візи.
             </p>
-            <button className="flex gap-1 items-center">
-              <span>Apply Now</span>
-              <img src="" alt="" />
+            <button className="flex gap-1 items-center text-white">
+              <span>Детальніше</span>
             </button>
           </div>
         </div>
@@ -54,14 +58,14 @@ function CountriesSection() {
             <div className="inline-block p-5 border border-lightGreen rounded-full" />
           </div>
           <div className="bg-lightGreen rounded-xl m-2 p-7 flex-[0.6] flex flex-col justify-between gap-3 text-white">
-            <h6 className="text-xl font-bold">Working Visa</h6>
-            <p>
-              Lorem Ipsum is simply dummy text the printing and provide best
-              visa ever
+            <h3 className="text-xl font-bold">Робоча віза</h3>
+            <p className="text-sm">
+              Допомагаємо обрати країну, підготувати пакет документів і пройти
+              візову процедуру без зайвих ризиків та затримок.
             </p>
             <button className="self-start flex gap-1 items-center px-7 py-4 border border-white rounded-full hover:shadow-2xl transition-all duration-500">
-              <span className="text-white">Apply Now</span>
-              <img src={ArrowRight} alt="" />
+              <span className="text-white">Подати заявку</span>
+              <img src={ArrowRight} alt="Стрілка вправо" />
             </button>
           </div>
         </div>
@@ -71,14 +75,12 @@ function CountriesSection() {
             <div className="inline-block p-5 border border-lightGreen rounded-full" />
           </div>
           <div className="hidden">
-            <h6>Working Visa</h6>
-            <p>
-              Lorem Ipsum is simply dummy text the printing and provide best
-              visa ever
+            <h3>Навчання за кордоном</h3>
+            <p className="text-white/80 text-sm">
+              Супровід при вступі до університетів та коледжів.
             </p>
-            <button className="flex gap-1 items-center">
-              <span>Apply Now</span>
-              <img src="" alt="" />
+            <button className="flex gap-1 items-center text-white">
+              <span>Детальніше</span>
             </button>
           </div>
         </div>
@@ -88,14 +90,12 @@ function CountriesSection() {
             <div className="inline-block p-5 border border-lightGreen rounded-full" />
           </div>
           <div className="hidden">
-            <h6>Working Visa</h6>
-            <p>
-              Lorem Ipsum is simply dummy text the printing and provide best
-              visa ever
+            <h3>Релокація бізнесу</h3>
+            <p className="text-white/80 text-sm">
+              Перенесення компанії в іншу країну під ключ.
             </p>
-            <button className="flex gap-1 items-center">
-              <span>Apply Now</span>
-              <img src="" alt="" />
+            <button className="flex gap-1 items-center text-white">
+              <span>Детальніше</span>
             </button>
           </div>
         </div>
@@ -105,14 +105,12 @@ function CountriesSection() {
             <div className="inline-block p-5 border border-lightGreen rounded-full" />
           </div>
           <div className="hidden">
-            <h6>Working Visa</h6>
-            <p>
-              Lorem Ipsum is simply dummy text the printing and provide best
-              visa ever
+            <h3>Інвестиційні програми</h3>
+            <p className="text-white/80 text-sm">
+              Підтримка в участі в інвестиційних міграційних програмах.
             </p>
-            <button className="flex gap-1 items-center">
-              <span>Apply Now</span>
-              <img src="" alt="" />
+            <button className="flex gap-1 items-center text-white">
+              <span>Детальніше</span>
             </button>
           </div>
         </div>
