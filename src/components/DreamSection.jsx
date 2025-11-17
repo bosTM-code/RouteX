@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Travel1 from "../assets/Travel1.jpg";
 import Travel2 from "../assets/Travel2.png";
 import GridCircle from "../assets/GridCircle.svg";
@@ -70,17 +71,16 @@ function DreamSection() {
         <div className="max-w-[640px] mx-auto mt-8 xl:mt-0">
           <div className="flex items-center gap-2 text-[#0B4F39] font-semibold uppercase tracking-wide text-[13px]">
             <img src={PassGreen} alt="" className="w-5 h-5" />
-            <span>Why Choose Us</span>
+            <span>Чому обирають нас</span>
           </div>
-          <h2 className="mt-3 text-[40px] leading-[1.15] sm:text-[44px] lg:text-[45px] font-extrabold text-black">
-            Where Wanderlust Meets{" "}
-            <span className="text-darkGreen">Dream Destinations</span>
+          <h2 className="mt-3 text-[40px] leading-[1.15] sm:text-[44px] lg:text-[45px] font-extrabold text-darkGreen">
+            Консалтинг, який перетворює плани на реальні можливості
           </h2>
           <p className="mt-5 text-[#60756C] leading-7">
-            Et purus duis sollicitudin dignissim habitant. Egestas nulla quis
-            venenatis cras sed eu massa Et purus duis sollicitudin dignissim
-            habitant. Egestas nulla quis venenatis cras sed eu massa Et purus
-            duis sollicitudin dignissim habitant. Egestas nulla
+            Ми супроводжуємо підприємців, фахівців та їхні команди на кожному
+            етапі релокації: від вибору країни та візової стратегії до відкриття
+            компанії та податкового планування. Без зайвої бюрократії, з чітким
+            планом дій та прозорими рекомендаціями.
           </p>
 
           {/* two feature cards */}
@@ -89,20 +89,32 @@ function DreamSection() {
             <div className="rounded-2xl border border-[#E6EEE9] bg-white p-6">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-[#86D946] grid place-items-center">
-                  <img src={WebPage} alt="" className="w-6 h-6" />
+                  <img
+                    src={WebPage}
+                    alt="Іконка вебсторінки"
+                    className="w-6 h-6"
+                  />
                 </div>
                 <h3 className="text-lg font-semibold text-[#0B4F39]">
-                  Passport Plus
+                  Комплексний супровід
                 </h3>
               </div>
               <ul className="mt-4 space-y-3 text-[#4E5F59]">
                 <li className="flex items-start gap-2">
-                  <img src={CheckGreen} alt="" className="mt-1 w-4 h-4" />
-                  <span>Beyond Border Immigration</span>
+                  <img
+                    src={CheckGreen}
+                    alt="Позначка"
+                    className="mt-1 w-4 h-4"
+                  />
+                  <span>Розробка візових та міграційних стратегій</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <img src={CheckGreen} alt="" className="mt-1 w-4 h-4" />
-                  <span>Worldwide Visa Assistance</span>
+                  <img
+                    src={CheckGreen}
+                    alt="Позначка"
+                    className="mt-1 w-4 h-4"
+                  />
+                  <span>Підготовка та перевірка пакету документів</span>
                 </li>
               </ul>
             </div>
@@ -111,20 +123,28 @@ function DreamSection() {
             <div className="rounded-2xl border border-[#E6EEE9] bg-white p-6">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-[#86D946] grid place-items-center">
-                  <img src={Camp} alt="" className="w-6 h-6" />
+                  <img src={Camp} alt="Іконка команди" className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-semibold text-[#0B4F39]">
-                  Global Entry
+                  Релокація бізнесу
                 </h3>
               </div>
               <ul className="mt-4 space-y-3 text-[#4E5F59]">
                 <li className="flex items-start gap-2">
-                  <img src={CheckGreen} alt="" className="mt-1 w-4 h-4" />
-                  <span>GlobeTrot Visa Services</span>
+                  <img
+                    src={CheckGreen}
+                    alt="Позначка"
+                    className="mt-1 w-4 h-4"
+                  />
+                  <span>План переїзду команди та офісу</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <img src={CheckGreen} alt="" className="mt-1 w-4 h-4" />
-                  <span>Infinity Visa Solutions</span>
+                  <img
+                    src={CheckGreen}
+                    alt="Позначка"
+                    className="mt-1 w-4 h-4"
+                  />
+                  <span>Оптимізація юридичної та податкової структури</span>
                 </li>
               </ul>
             </div>
@@ -132,18 +152,18 @@ function DreamSection() {
 
           {/* actions */}
           <div className="mt-7 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            <button className="inline-flex items-center gap-3 rounded-full border border-[#86D946] bg-white px-6 py-3 text-[#0B4F39] hover:shadow transition">
-              Read More
-              <img src={ArrowRightGreen} alt="" />
-            </button>
+            <Link className="inline-flex items-center gap-3 rounded-full border border-[#86D946] bg-white px-6 py-3 text-[#0B4F39] hover:shadow transition">
+              Дізнатися більше
+              <img src={ArrowRightGreen} alt="Стрілка вправо" />
+            </Link>
 
             <div className="flex items-center gap-4">
               <div className="w-11 h-11 rounded-full border bg-lightGreen grid place-items-center">
-                <img src={Phone} alt="" />
+                <img src={Phone} alt="Іконка телефону" />
               </div>
               <div>
-                <p className="text-[#6E7E76] text-sm">Need help?</p>
-                <p className="text-[#0B4F39] font-semibold">(808) 555–0111</p>
+                <p className="text-[#6E7E76] text-sm">Потрібна консультація?</p>
+                <p className="text-[#0B4F39] font-semibold"> (800) 555–0111</p>
               </div>
             </div>
           </div>
