@@ -1,23 +1,26 @@
 import Check from "../assets/CheckDark.svg";
 
-function CountryCard({ title, p1, p2, p3 }) {
+function CountryCard({ title, points }) {
   return (
-    <div className="border border-gray-500 flex flex-col gap-5 rounded-xl w-max-[300px] p-7">
-      <div className="p-8 border border-lightGreen bg-slate-200 rounded-full self-start" />
-      <h6 className="text-xl text-darkGreen font-bold">{title}</h6>
-      <div className="flex items-center gap-1">
-        <img src={Check} alt="" />
-        <p>{p1}</p>
+    <article className="h-full rounded-2xl border border-slate-200 bg-white p-6 sm:p-7 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+      {/* Кружок зверху */}
+      <div className="w-14 h-14 rounded-full border border-lightGreen bg-slate-50 flex items-center justify-center self-start mb-1">
+        {/* Якщо захочеш, можна вставити сюди маленький прапорець/іконку країни */}
       </div>
-      <div className="flex items-center gap-1">
-        <img src={Check} alt="" />
-        <p>{p2}</p>
+
+      {/* Назва країни */}
+      <h4 className="text-lg sm:text-xl text-darkGreen font-bold">{title}</h4>
+
+      {/* Список послуг / можливостей */}
+      <div className="space-y-2 text-sm sm:text-base text-slate-700">
+        {points.map((text) => (
+          <div key={text} className="flex items-start gap-2">
+            <img src={Check} alt="" className="mt-[2px]" />
+            <p>{text}</p>
+          </div>
+        ))}
       </div>
-      <div className="flex items-center gap-1">
-        <img src={Check} alt="" />
-        <p>{p3}</p>
-      </div>
-    </div>
+    </article>
   );
 }
 

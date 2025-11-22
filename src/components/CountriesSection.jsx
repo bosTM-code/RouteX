@@ -1,119 +1,147 @@
+import { useState } from "react";
 import PassWhite from "../assets/PassWhite.svg";
 import ArrowRightSmall from "../assets/ArrowRightSmall.svg";
 import ArrowLeftSmall from "../assets/ArrowLeftSmall.svg";
 import ArrowRight from "../assets/arrowRight.svg";
 
+const countries = [
+  {
+    name: "Канада",
+    description:
+      "Робочі візи, навчальні програми та довгострокове перебування.",
+  },
+  {
+    name: "Німеччина",
+    description:
+      "Релокація бізнесу, робочі візи, Blue Card та податкове планування.",
+  },
+  {
+    name: "Польща",
+    description: "Робочі візи, тимчасове перебування та карти побиту.",
+  },
+  {
+    name: "США",
+    description: "Бізнес-візи, навчання, програми для фахівців.",
+  },
+  {
+    name: "Велика Британія",
+    description: "Візи для фахівців, підприємців та студентів.",
+  },
+];
+
 function CountriesSection() {
+  const [activeIndex, setActiveIndex] = useState(1); // друга картка активна за замовчуванням
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev - 1 + countries.length) % countries.length);
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % countries.length);
+  };
+
   return (
-    <section className=" w-11/12 bg-darkGreen rounded-3xl mx-auto px-6 py-12 sm:px-10 sm:py-16 md:px-16 md:py-24 lg:px-20 lg:py-32 overflow-hidden my-14">
+    <section className="w-11/12 bg-darkGreen rounded-3xl mx-auto px-6 py-12 sm:px-10 sm:py-16 md:px-16 md:py-24 lg:px-20 lg:py-32 overflow-hidden my-14 text-white">
       {/* UPPER */}
-      <div className="w-[71.66%] mx-auto flex justify-between mb-8 md:mb-14 ">
+      <div className="w-[71.66%] mx-auto flex flex-col md:flex-row justify-between gap-6 mb-10 md:mb-14">
         <div className="text-white">
-          <div className="flex items-center gap-1 justify-center md:justify-normal">
+          <div className="flex items-center gap-2 justify-center md:justify-start">
             <img src={PassWhite} alt="Іконка паспорта" />
-            <p className="uppercase text-xl font-bold md:font-normal md:text-sm">
-              Наші напрямки
+            <p className="uppercase text-sm font-semibold tracking-wide">
+              Наші країни
             </p>
           </div>
 
-          <h3 className="w-2/3 text-[1.05rem] md:text-[1.25rem] xl:text-[3rem] md:font-bold mx-auto md:mx-0">
-            Країни, з якими ми працюємо
-          </h3>
+          <h2 className="mt-3 w-full md:w-3/4 text-lg sm:text-xl xl:text-3xl font-bold mx-auto md:mx-0">
+            Країни, з якими ми працюємо для віз та релокації
+          </h2>
         </div>
+
         <div className="self-end hidden md:flex flex-shrink-0 gap-3">
           <button
-            className=" p-6 bg-darkGreen rounded-full border border-white hover:bg-lightGreen hover:border-lightGreen transition"
-            aria-label="Наступний напрямок"
+            className="p-4 lg:p-5 bg-darkGreen rounded-full border border-white/70 hover:bg-lightGreen hover:border-lightGreen transition"
+            aria-label="Попередня країна"
+            onClick={handlePrev}
           >
             <img src={ArrowLeftSmall} alt="Стрілка вліво" />
           </button>
           <button
-            className=" p-6 bg-darkGreen rounded-full border border-white hover:bg-lightGreen hover:border-lightGreen transition"
-            aria-label="Попередній напрямок"
+            className="p-4 lg:p-5 bg-darkGreen rounded-full border border-white/70 hover:bg-lightGreen hover:border-lightGreen transition"
+            aria-label="Наступна країна"
+            onClick={handleNext}
           >
             <img src={ArrowRightSmall} alt="Стрілка вправо" />
           </button>
         </div>
       </div>
+
       {/* LOWER */}
-      <div className=" py-1 px-1 rounded-xl grid-cols-2 sm:grid-cols-4 grid md:grid-cols-6 xl:grid-cols-12 gap-5 w-[71.66%] mx-auto">
-        {/* FIRST */}
-        <div className="h-full flex flex-col justify-between bg-gray-400 rounded-xl col-span-2">
-          <div className="self-end p-5">
-            <div className="inline-block p-6 border border-lightGreen rounded-full" />
-          </div>
-          <div className="hidden">
-            <h3>Робоча віза</h3>
-            <p className="text-white/80 text-sm">
-              Консультації та супровід для отримання робочої візи.
-            </p>
-            <button className="flex gap-1 items-center text-white">
-              <span>Детальніше</span>
-            </button>
-          </div>
-        </div>
-        {/* SECOND */}
-        <div className="h-full flex flex-col justify-between bg-gray-400 rounded-xl col-span-2 sm:col-span-4">
-          <div className="self-end p-5">
-            <div className="inline-block p-5 border border-lightGreen rounded-full" />
-          </div>
-          <div className="bg-lightGreen rounded-xl m-2 p-7 flex-[0.6] flex flex-col justify-between gap-3 text-white">
-            <h3 className="text-xl font-bold">Робоча віза</h3>
-            <p className="text-sm">
-              Допомагаємо обрати країну, підготувати пакет документів і пройти
-              візову процедуру без зайвих ризиків та затримок.
-            </p>
-            <button className="self-start flex gap-1 items-center px-7 py-4 border border-white rounded-full hover:shadow-2xl transition-all duration-500">
-              <span className="text-white">Подати заявку</span>
-              <img src={ArrowRight} alt="Стрілка вправо" />
-            </button>
-          </div>
-        </div>
-        {/* THIRD */}
-        <div className="h-full flex flex-col justify-between bg-gray-400 rounded-xl col-span-2">
-          <div className="self-end p-5">
-            <div className="inline-block p-5 border border-lightGreen rounded-full" />
-          </div>
-          <div className="hidden">
-            <h3>Навчання за кордоном</h3>
-            <p className="text-white/80 text-sm">
-              Супровід при вступі до університетів та коледжів.
-            </p>
-            <button className="flex gap-1 items-center text-white">
-              <span>Детальніше</span>
-            </button>
-          </div>
-        </div>
-        {/* FORTH */}
-        <div className="h-full flex flex-col justify-between bg-gray-400 rounded-xl col-span-2">
-          <div className="self-end p-5">
-            <div className="inline-block p-5 border border-lightGreen rounded-full" />
-          </div>
-          <div className="hidden">
-            <h3>Релокація бізнесу</h3>
-            <p className="text-white/80 text-sm">
-              Перенесення компанії в іншу країну під ключ.
-            </p>
-            <button className="flex gap-1 items-center text-white">
-              <span>Детальніше</span>
-            </button>
-          </div>
-        </div>
-        {/* FIFTH */}
-        <div className="h-full flex flex-col justify-between bg-gray-400 rounded-xl col-span-2">
-          <div className="self-end p-5">
-            <div className="inline-block p-5 border border-lightGreen rounded-full" />
-          </div>
-          <div className="hidden">
-            <h3>Інвестиційні програми</h3>
-            <p className="text-white/80 text-sm">
-              Підтримка в участі в інвестиційних міграційних програмах.
-            </p>
-            <button className="flex gap-1 items-center text-white">
-              <span>Детальніше</span>
-            </button>
-          </div>
-        </div>
+      <div className="py-1 px-1 rounded-xl grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-12 gap-5 w-[71.66%] mx-auto">
+        {countries.map((country, index) => {
+          const isActive = index === activeIndex;
+
+          const cardCols = isActive
+            ? "col-span-2 sm:col-span-2 md:col-span-4 xl:col-span-4"
+            : "col-span-2 sm:col-span-2 md:col-span-2 xl:col-span-2";
+
+          return (
+            <div
+              key={country.name}
+              className={
+                "h-full flex flex-col justify-between bg-gray-400/30 rounded-xl " +
+                cardCols
+              }
+            >
+              {/* НЕактивна картка: кружок вгорі, назва внизу */}
+              {!isActive && (
+                <>
+                  <div className="self-end p-5">
+                    <button
+                      type="button"
+                      onClick={() => setActiveIndex(index)}
+                      aria-pressed={isActive}
+                      aria-label={`Обрати країну ${country.name}`}
+                      className="inline-block rounded-full border border-lightGreen p-5 sm:p-6 hover:bg-lightGreen/10 transition"
+                    />
+                  </div>
+                  <div className="px-5 pb-5 text-center">
+                    <h3 className="text-xl sm:text-lg font-semibold">
+                      {country.name}
+                    </h3>
+                  </div>
+                </>
+              )}
+
+              {/* АКТИВНА картка: назва ліворуч, кружок праворуч + зелений блок з описом */}
+              {isActive && (
+                <>
+                  <div className="flex items-center justify-between px-5 pt-5">
+                    <h3 className="flex-1 text-xl sm:text-xl font-semibold text-center">
+                      {country.name}
+                    </h3>
+                    <button
+                      type="button"
+                      onClick={() => setActiveIndex(index)}
+                      aria-pressed={isActive}
+                      aria-label={`Обрана країна ${country.name}`}
+                      className="rounded-full border border-lightGreen p-6 sm:p-7 bg-lightGreen/20 transition"
+                    />
+                  </div>
+
+                  <div className="bg-lightGreen rounded-xl mx-2 mb-2 mt-3 p-6 sm:p-7 flex flex-col justify-between gap-3 text-white">
+                    <p className="text-xs sm:text-sm text-white/90">
+                      {country.description}
+                    </p>
+                    <button className="self-start flex gap-2 items-center px-6 py-3 border border-white rounded-full hover:shadow-2xl transition-all duration-300">
+                      <span className="text-sm font-semibold">Детальніше</span>
+                      <img src={ArrowRight} alt="Стрілка вправо" />
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          );
+        })}
       </div>
     </section>
   );

@@ -14,10 +14,10 @@ function About() {
       <section className="pt-0 pb-0">
         <div className="relative w-11/12 max-w-6xl mx-auto bg-darkGreen text-white rounded-3xl px-6 py-8 sm:px-10 sm:py-10 overflow-hidden">
           <p className="text-sm uppercase tracking-wide opacity-80">
-            Home / <span className="font-semibold">About Us</span>
+            Головна / <span className="font-semibold">Про нас</span>
           </p>
           <h1 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold">
-            About Us
+            Про нас
           </h1>
           <p className="mt-4 max-w-xl text-sm sm:text-base text-white/80">
             RouteX Consulting — консалтинговий центр, який допомагає з

@@ -46,13 +46,13 @@ function DreamSection() {
           <div className="flex flex-col gap-3 sm:gap-4 lg:gap-6">
             <div className="flex-[0.15] bg-[#86D946] rounded-xl sm:rounded-2xl px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-white shadow-sm flex items-center">
               <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
-                <span className="text-2xl sm:text-3xl lg:text-4xl font-extrabold ">
+                <span className="text-3xl sm:text-4xl lg:text-6xl font-extrabold ">
                   25
                 </span>
                 <div className="text-xs sm:text-base font-semibold">
-                  Years Of
+                  Років досвіду
                   <br />
-                  experience
+                  на ринку консалтингу
                 </div>
               </div>
             </div>

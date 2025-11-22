@@ -3,7 +3,6 @@ import BusinessVisa from "../assets/BusinessVisa.jpg";
 import WorkVisa from "../assets/WorkVisa.jpg";
 import StudentVisa from "../assets/StudentVisa.jpg";
 import TravelVisa from "../assets/TravelVisa.jpg";
-import Bird from "../assets/bird.png";
 import VisaCard from "./VisaCard";
 import Location from "../assets/Location.svg";
 import Security from "../assets/Security.svg";
@@ -39,8 +38,8 @@ const VisaData = [
 function VisaSection() {
   return (
     <section className="w-11/12 max-w-[1200px] mx-auto mb-16">
-      <div className="text-center mb-10">
-        <p className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-green-700 flex items-center justify-center gap-2">
+      <div className="text-center mb-10  text-darkGreen">
+        <p className="text-xs sm:text-sm font-semibold uppercase tracking-wide flex  text-darkGreen items-center justify-center gap-2">
           <img
             src={VisaIcon}
             alt="Іконка візи"
@@ -48,7 +47,7 @@ function VisaSection() {
           />
           <span>Візові рішення</span>
         </p>
-        <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">
+        <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-extrabold">
           Основні типи віз, з якими ми працюємо
         </h2>
         <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
