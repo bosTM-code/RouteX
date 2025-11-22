@@ -3,7 +3,7 @@ import ArrowTopRight from "../assets/ArrowTopRight.svg";
 function VisaCard({ icon, title, text, img }) {
   return (
     <div className="col-span-2 2xl:max-w-[630px] border border-gray-600 rounded-xl">
-      <div className="flex flex-col 2xl:flex-row p-5 ">
+      <div className="flex flex-col md:flex-row p-5 ">
         <div className=" self-center max-w-[250px]">
           {img && <img src={img} alt="" className=" rounded-xl" />}
         </div>
