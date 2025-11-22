@@ -76,9 +76,19 @@ function Navbar() {
             </div>
           ))}
         </nav>
-        <button className="hidden lg:flex items-center bg-lightGreen px-5 py-4 rounded-full text-sm text-white xl:text-base gap-2 hover:bg-green-600 transition">
-          <div className="">Get An Appointment</div>
-          <img src={ArrowRight} alt="arrowright" />
+        <button
+          className="flex items-center bg-lightGreen px-4 py-2 sm:px-5 sm:py-3 rounded-full 
+             text-xs sm:text-sm lg:text-base text-white gap-2 max-w-[230px] 
+             hover:bg-green-600 transition"
+        >
+          <span className="whitespace-normal leading-snug text-center">
+            Записатися на консультацію
+          </span>
+          <img
+            src={ArrowRight}
+            alt="Перейти до запису"
+            className="w-4 h-4 sm:w-5 sm:h-5"
+          />
         </button>
 
         {/* BURGER MOBILE */}
