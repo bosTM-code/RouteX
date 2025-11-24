@@ -1,22 +1,24 @@
 import Check from "../assets/CheckDark.svg";
 
-function CountryCard({ title, points }) {
+function CountryCard({ title, points = [], flag }) {
   return (
-    <article className="h-full rounded-2xl border border-slate-200 bg-white p-6 sm:p-7 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
-      {/* Кружок зверху */}
-      <div className="w-14 h-14 rounded-full border border-lightGreen bg-slate-50 flex items-center justify-center self-start mb-1">
-        {/* Якщо захочеш, можна вставити сюди маленький прапорець/іконку країни */}
+    <article className="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+      {/* Кружок з прапором */}
+      <div className="w-14 h-14 rounded-full overflow-hidden border border-lightGreen self-start">
+        <img
+          src={flag}
+          alt={`Прапор ${title}`}
+          className="w-full h-full object-cover"
+        />
       </div>
 
-      {/* Назва країни */}
-      <h4 className="text-lg sm:text-xl text-darkGreen font-bold">{title}</h4>
+      <h4 className="text-lg font-bold text-darkGreen">{title}</h4>
 
-      {/* Список послуг / можливостей */}
-      <div className="space-y-2 text-sm sm:text-base text-slate-700">
-        {points.map((text) => (
-          <div key={text} className="flex items-start gap-2">
-            <img src={Check} alt="" className="mt-[2px]" />
-            <p>{text}</p>
+      <div className="space-y-2 text-slate-700">
+        {points.map((p) => (
+          <div className="flex items-start gap-2" key={p}>
+            <img src={Check} className="mt-[3px]" />
+            <p>{p}</p>
           </div>
         ))}
       </div>

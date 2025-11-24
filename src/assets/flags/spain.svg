@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="256" cy="256" r="256" />
+    </clipPath>
+  </defs>
+  <circle cx="256" cy="256" r="256" fill="#aa151b" />
+  <g clip-path="url(#circleClip)">
+    <!-- жовта центральна смуга (1/2 висоти) -->
+    <rect width="512" height="256" y="128" fill="#f1bf00" />
+  </g>
+</svg>

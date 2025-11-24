@@ -78,7 +78,7 @@ function Navbar() {
         </nav>
         <button
           className="flex items-center bg-lightGreen px-4 py-2 sm:px-5 sm:py-3 rounded-full 
-             text-xs sm:text-sm lg:text-base text-white gap-2 max-w-[230px] 
+             text-xs sm:text-sm lg:text-base text-white gap-2 max-w-[260px] 
              hover:bg-green-600 transition"
         >
           <span className="whitespace-normal leading-snug text-center">

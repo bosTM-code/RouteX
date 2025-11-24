@@ -2,6 +2,16 @@ import { useState } from "react";
 import CountryCard from "./CountryCard";
 import BrokenArrow from "../assets/ArrowBroken.svg";
 import ArrowRight from "../assets/arrowRight.svg";
+import caFlag from "../assets/flags/canada.svg";
+import deFlag from "../assets/flags/germany.svg";
+import plFlag from "../assets/flags/poland.svg";
+import usFlag from "../assets/flags/usa.svg";
+import ukFlag from "../assets/flags/uk.svg";
+import esFlag from "../assets/flags/spain.svg";
+import czFlag from "../assets/flags/czechia.svg";
+import ptFlag from "../assets/flags/portugal.svg";
+import nlFlag from "../assets/flags/netherlands.svg";
+import atFlag from "../assets/flags/austria.svg";
 
 const countryData = [
   {
@@ -12,6 +22,7 @@ const countryData = [
       "Підготовка документів на робочу чи навчальну візу",
       "Планування шляху до ПМП та громадянства",
     ],
+    flag: caFlag,
   },
   {
     id: "de",
@@ -21,6 +32,7 @@ const countryData = [
       "Релокація ІТ-спеціалістів та фахівців з дефіцитних сфер",
       "Податкове та юридичне структурування для бізнесу",
     ],
+    flag: deFlag,
   },
   {
     id: "pl",
@@ -30,6 +42,7 @@ const countryData = [
       "Оформлення карт побиту та карти резидента ЄС",
       "Супровід відкриття ФОП/компанії для легальної роботи",
     ],
+    flag: plFlag,
   },
   {
     id: "us",
@@ -39,6 +52,7 @@ const countryData = [
       "Підготовка документів для співбесіди в посольстві",
       "Довгострокові стратегії перебування та релокації",
     ],
+    flag: usFlag,
   },
   {
     id: "uk",
@@ -47,8 +61,8 @@ const countryData = [
       "Візи для фахівців та підприємців (Skilled Worker, Start-up, Innovator)",
       "Супровід відкриття компанії та банківських рахунків",
       "Консультації щодо податкового резидентства та compliance",
-      7,
     ],
+    flag: ukFlag,
   },
   {
     id: "es",
@@ -58,6 +72,7 @@ const countryData = [
       "Довгострокове проживання за програмами резидентства",
       "Підбір регіону та моделі легального перебування",
     ],
+    flag: esFlag,
   },
   {
     id: "cz",
@@ -67,6 +82,7 @@ const countryData = [
       "Реєстрація ФОП / компанії в Чехії",
       "Консультації з легального перебування сім'ї",
     ],
+    flag: czFlag,
   },
   {
     id: "pt",
@@ -76,6 +92,7 @@ const countryData = [
       "Підготовка документів для подання в консульство",
       "Податкове планування для релокації капіталу",
     ],
+    flag: ptFlag,
   },
   {
     id: "nl",
@@ -85,6 +102,7 @@ const countryData = [
       "Супровід релокації в ІТ та стартап-секторі",
       "Консультації щодо програм для підприємців",
     ],
+    flag: nlFlag,
   },
   {
     id: "at",
@@ -94,6 +112,7 @@ const countryData = [
       "Консультації щодо переїзду для фахівців і їхніх сімей",
       "Супровід відкриття бізнесу та реєстрації компанії",
     ],
+    flag: atFlag,
   },
 ];
 

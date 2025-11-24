@@ -5,6 +5,8 @@ import Sponsers from "../components/Sponsers";
 import CountriesSection from "../components/CountriesSection";
 import VisaSection from "../components/VisaSection";
 import AvailibleCountriesSection from "../components/AvailibleCountriesSection";
+import SuccessStoriesSection from "../components/SuccessStoriesSection";
+import BlogPreviewSection from "../components/BlogPreviewSection";
 
 function HomePage() {
   return (
@@ -16,6 +18,8 @@ function HomePage() {
       <CountriesSection />
       <VisaSection />
       <AvailibleCountriesSection />
+      <SuccessStoriesSection />
+      <BlogPreviewSection />
     </div>
   );
 }

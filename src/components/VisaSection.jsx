@@ -8,6 +8,7 @@ import Location from "../assets/Location.svg";
 import Security from "../assets/Security.svg";
 import GlobeGreen from "../assets/GlobeGreen.svg";
 import VisaIcon from "../assets/VisaIcon.svg";
+
 const VisaData = [
   {
     icon: Security,

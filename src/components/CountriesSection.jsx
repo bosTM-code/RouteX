@@ -3,29 +3,39 @@ import PassWhite from "../assets/PassWhite.svg";
 import ArrowRightSmall from "../assets/ArrowRightSmall.svg";
 import ArrowLeftSmall from "../assets/ArrowLeftSmall.svg";
 import ArrowRight from "../assets/arrowRight.svg";
+import caFlag from "../assets/flags/canada.svg";
+import deFlag from "../assets/flags/germany.svg";
+import plFlag from "../assets/flags/poland.svg";
+import usFlag from "../assets/flags/usa.svg";
+import ukFlag from "../assets/flags/uk.svg";
 
 const countries = [
   {
     name: "Канада",
     description:
       "Робочі візи, навчальні програми та довгострокове перебування.",
+    flag: caFlag,
   },
   {
     name: "Німеччина",
     description:
       "Релокація бізнесу, робочі візи, Blue Card та податкове планування.",
+    flag: deFlag,
   },
   {
     name: "Польща",
     description: "Робочі візи, тимчасове перебування та карти побиту.",
+    flag: plFlag,
   },
   {
     name: "США",
     description: "Бізнес-візи, навчання, програми для фахівців.",
+    flag: usFlag,
   },
   {
     name: "Велика Британія",
     description: "Візи для фахівців, підприємців та студентів.",
+    flag: ukFlag,
   },
 ];
 
@@ -101,8 +111,16 @@ function CountriesSection() {
                       onClick={() => setActiveIndex(index)}
                       aria-pressed={isActive}
                       aria-label={`Обрати країну ${country.name}`}
-                      className="inline-block rounded-full border border-lightGreen p-5 sm:p-6 hover:bg-lightGreen/10 transition"
-                    />
+                      className="inline-block rounded-full border border-lightGreen w-14 h-14 sm:w-16 sm:h-16 overflow-hidden hover:shadow-lg hover:border-white transition"
+                    >
+                      {country.flag && (
+                        <img
+                          src={country.flag}
+                          alt={`Прапор країни ${country.name}`}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
+                    </button>
                   </div>
                   <div className="px-5 pb-5 text-center">
                     <h3 className="text-xl sm:text-lg font-semibold">
@@ -124,8 +142,16 @@ function CountriesSection() {
                       onClick={() => setActiveIndex(index)}
                       aria-pressed={isActive}
                       aria-label={`Обрана країна ${country.name}`}
-                      className="rounded-full border border-lightGreen p-6 sm:p-7 bg-lightGreen/20 transition"
-                    />
+                      className="rounded-full border border-white w-16 h-16 sm:w-18 sm:h-18 overflow-hidden bg-lightGreen/20 shadow-lg transition"
+                    >
+                      {country.flag && (
+                        <img
+                          src={country.flag}
+                          alt={`Прапор країни ${country.name}`}
+                          className="w-full h-full object-cover"
+                        />
+                      )}
+                    </button>
                   </div>
 
                   <div className="bg-lightGreen rounded-xl mx-2 mb-2 mt-3 p-6 sm:p-7 flex flex-col justify-between gap-3 text-white">
