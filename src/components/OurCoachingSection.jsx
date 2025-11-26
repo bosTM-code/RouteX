@@ -6,10 +6,12 @@ import Coach1 from "../assets/coach1.jpg";
 import Coach2 from "../assets/coach2.jpg";
 import Coach3 from "../assets/coach3.jpg";
 
-import Facebook from "../assets/Facebook.svg";
-import Instagram from "../assets/Instagram.svg";
-import LinkedIn from "../assets/LinkedIn.svg";
-import XIcon from "../assets/X.svg";
+import Facebook from "../assets/Facebook_green.svg";
+import Instagram from "../assets/Instagram_green.svg";
+import LinkedIn from "../assets/LinkedIn_green.svg";
+import XIcon from "../assets/X_green.svg";
+
+import CoachingLines from "../assets/coaching-lines.svg";
 
 const coaches = [
   {
@@ -18,10 +20,10 @@ const coaches = [
     role: "Візовий консультант (США, Канада)",
     image: Coach1,
     socials: {
-      x: "#",
-      facebook: "#",
-      instagram: "#",
-      linkedin: "#",
+      x: "https://x.com/",
+      facebook: "https://www.facebook.com/",
+      instagram: "https://www.instagram.com/",
+      linkedin: "https://linkedin.com/",
     },
   },
   {
@@ -30,10 +32,10 @@ const coaches = [
     role: "Імміграційний юрист (ЄС)",
     image: Coach2,
     socials: {
-      x: "#",
-      facebook: "#",
-      instagram: "#",
-      linkedin: "#",
+      x: "https://x.com/",
+      facebook: "https://www.facebook.com/",
+      instagram: "https://www.instagram.com/",
+      linkedin: "https://linkedin.com/",
     },
   },
   {
@@ -42,10 +44,10 @@ const coaches = [
     role: "Карʼєрний коуч для релокації",
     image: Coach3,
     socials: {
-      x: "#",
-      facebook: "#",
-      instagram: "#",
-      linkedin: "#",
+      x: "https://x.com/",
+      facebook: "https://www.facebook.com/",
+      instagram: "https://www.instagram.com/",
+      linkedin: "https://linkedin.com/",
     },
   },
 ];
@@ -64,9 +66,13 @@ function OurCoachingSection() {
           items-center relative overflow-hidden
         "
       >
-        {/* Легка фонова текстура */}
-        <div className="pointer-events-none absolute inset-0 opacity-40">
-          <div className="w-full h-full bg-[radial-gradient(circle_at_top,#e3efe6_0,#f4f9f4_55%,#f4f9f4_100%)]" />
+        {/* фон з хвилястими лініями з Figma */}
+        <div className="pointer-events-none absolute inset-0 opacity-20">
+          <img
+            src={CoachingLines}
+            alt=""
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* ЛІВА ЧАСТИНА: заголовок + список людей */}

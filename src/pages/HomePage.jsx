@@ -8,6 +8,8 @@ import AvailibleCountriesSection from "../components/AvailibleCountriesSection";
 import OfferStatsSection from "../components/OfferStatsSection";
 import CoachingSection from "../components/CoachingSection";
 import OurCoachingSection from "../components/OurCoachingSection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import ProcessSection from "../components/ProcessSection";
 import SuccessStoriesSection from "../components/SuccessStoriesSection";
 import BlogPreviewSection from "../components/BlogPreviewSection";
 
@@ -24,6 +26,8 @@ function HomePage() {
       <OfferStatsSection />
       <CoachingSection />
       <OurCoachingSection />
+      <TestimonialsSection />
+      <ProcessSection />
       <SuccessStoriesSection />
       <BlogPreviewSection />
     </div>

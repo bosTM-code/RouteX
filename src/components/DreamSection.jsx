@@ -8,7 +8,7 @@ import Camp from "../assets/Camp.svg";
 import WebPage from "../assets/WebPage.svg";
 import Phone from "../assets/Phone.svg";
 import PassGreen from "../assets/PassGreen.svg";
-import ArrowRightGreen from "../assets/ArrowRightGreen.svg";
+import ArrowRightGreen from "../assets/ArrowRightGreenSmall.svg";
 
 function DreamSection() {
   return (
