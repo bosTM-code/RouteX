@@ -5,6 +5,8 @@ import Sponsers from "../components/Sponsers";
 import CountriesSection from "../components/CountriesSection";
 import VisaSection from "../components/VisaSection";
 import AvailibleCountriesSection from "../components/AvailibleCountriesSection";
+import OfferStatsSection from "../components/OfferStatsSection";
+import CoachingSection from "../components/CoachingSection";
 import SuccessStoriesSection from "../components/SuccessStoriesSection";
 import BlogPreviewSection from "../components/BlogPreviewSection";
 
@@ -18,6 +20,8 @@ function HomePage() {
       <CountriesSection />
       <VisaSection />
       <AvailibleCountriesSection />
+      <OfferStatsSection />
+      <CoachingSection />
       <SuccessStoriesSection />
       <BlogPreviewSection />
     </div>
