@@ -1,8 +1,12 @@
 import { useState } from "react";
 import PassGreen from "../assets/PassGreen.svg";
-import ArrowLeftSmall from "../assets/ArrowLeftSmall.svg";
-import ArrowRightSmall from "../assets/ArrowRightSmall.svg";
+import ArrowLeftGreen from "../assets/ArrowLeftGreen.svg";
+import ArrowRightGreen from "../assets/ArrowRightGreen.svg";
 import ArrowRight from "../assets/arrowRight.svg";
+import Coaching1 from "../assets/coaching1.jpg";
+import Coaching2 from "../assets/coaching2.webp";
+import Coaching3 from "../assets/coaching3.jpg";
+import Coaching4 from "../assets/coaching4.webp";
 
 const coachingPrograms = [
   {
@@ -10,24 +14,28 @@ const coachingPrograms = [
     title: "Підготовка до візової співбесіди",
     description:
       "Пропрацьовуємо типові питання консула, логіку відповідей і вашу особисту історію, щоб ви почувалися впевнено.",
+    image: Coaching1,
   },
   {
     id: 2,
     title: "Мовні іспити для імміграції",
     description:
       "IELTS, TOEFL, TestDaF, ÖSD — допомагаємо скласти план підготовки, підбираємо формати курсів та матеріали.",
+    image: Coaching2,
   },
   {
     id: 3,
     title: "Карʼєрний коучинг для релокації",
     description:
       "Резюме під ринок цільової країни, LinkedIn-профіль та стратегія пошуку роботи після отримання візи.",
+    image: Coaching3,
   },
   {
     id: 4,
     title: "Адаптація після переїзду",
     description:
       "Розбираємо податкові, побутові та культурні питання: що робити в перші місяці після приїзду.",
+    image: Coaching4,
   },
 ];
 
@@ -74,18 +82,18 @@ function CoachingSection() {
           <button
             type="button"
             onClick={handlePrev}
-            className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-300 bg-white flex items-center justify-center hover:bg-slate-100 transition"
+            className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-300 bg-white flex items-center justify-center hover:bg-lightGreen transition"
             aria-label="Попередні програми"
           >
-            <img src={ArrowLeftSmall} alt="Попередня" />
+            <img src={ArrowLeftGreen} alt="Попередня" />
           </button>
           <button
             type="button"
             onClick={handleNext}
-            className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-lightGreen flex items-center justify-center hover:bg-green-600 transition"
+            className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-300 bg-white flex items-center justify-center hover:bg-lightGreen transition"
             aria-label="Наступні програми"
           >
-            <img src={ArrowRightSmall} alt="Наступна" />
+            <img src={ArrowRightGreen} alt="Наступна" />
           </button>
         </div>
       </div>
@@ -97,8 +105,17 @@ function CoachingSection() {
             key={item.id}
             className="bg-white rounded-3xl shadow-sm overflow-hidden flex flex-col"
           >
-            {/* Верхній сірий прямокутник під картинку */}
-            <div className="bg-slate-200 h-40 sm:h-48 lg:h-56 w-full" />
+            {/* Верхня картинка */}
+            <div className="w-full h-40 sm:h-48 lg:h-56 overflow-hidden bg-slate-200">
+              {item.image && (
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                />
+              )}
+            </div>
+
             {/* Нижня біла частина з текстом */}
             <div className="bg-white px-5 py-5 sm:px-6 sm:py-6 flex items-center justify-between gap-4">
               <div>
