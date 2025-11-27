@@ -1,4 +1,7 @@
+import HeroCommon from "../components/HeroCommon";
 import DreamSection from "../components/DreamSection";
+import ProcessSection from "../components/ProcessSection";
+import OfferStatsSection from "../components/OfferStatsSection";
 import AvailibleCountriesSection from "../components/AvailibleCountriesSection";
 import Sponsers from "../components/Sponsers";
 
@@ -11,26 +14,11 @@ import Passport from "../assets/PassGreen.svg";
 function About() {
   return (
     <div className="overflow-x-hidden">
-      <section className="pt-0 pb-0">
-        <div className="relative w-11/12 max-w-6xl mx-auto bg-darkGreen text-white rounded-3xl px-6 py-8 sm:px-10 sm:py-10 overflow-hidden">
-          <p className="text-sm uppercase tracking-wide opacity-80">
-            Головна / <span className="font-semibold">Про нас</span>
-          </p>
-          <h1 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-extrabold">
-            Про нас
-          </h1>
-          <p className="mt-4 max-w-xl text-sm sm:text-base text-white/80">
-            RouteX Consulting — консалтинговий центр, який допомагає з
-            імміграційними, візовими та бізнес-питаннями під ключ.
-          </p>
-
-          {/* легкий градієнт всередині заокругленого блока */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 to-transparent" />
-        </div>
-      </section>
-
-      {/* Блок 2: Where Wanderlust Meets Dream Destinations (твій DreamSection) */}
+      <HeroCommon title="Про нас" />
       <DreamSection />
+      <ProcessSection />
+      <OfferStatsSection />
+      <Sponsers />
 
       {/* Блок 3: Unforgettable Getaways Escaping Routine */}
       <section className="py-16">
@@ -149,9 +137,6 @@ function About() {
         </div>
 
         {/* Логотипи партнерів (як в макеті) */}
-        <div className="mt-10">
-          <Sponsers />
-        </div>
       </section>
 
       {/* Блок 5: Let Your Wanderlust Guide You (форма) */}

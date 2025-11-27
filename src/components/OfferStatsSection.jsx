@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Travel1 from "../assets/Travel1.jpg";
 import Travel2 from "../assets/Travel2.png";
 import Globe from "../assets/Globe.svg";
-import ArrowRight from "../assets/arrowRight.svg";
+import ArrowRight from "../assets/arrowRightGreenSmall.svg";
 
 function OfferStatsSection() {
   const stats = [
@@ -56,13 +56,13 @@ function OfferStatsSection() {
                 <div>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-lightGreen text-darkGreen font-medium text-sm sm:text-base hover:bg-lightGreen hover:text-white transition"
+                    className="group inline-flex items-center gap-2 px-6 py-3 rounded-full border border-lightGreen text-darkGreen font-medium text-sm sm:text-base hover:bg-lightGreen hover:text-white transition"
                   >
                     <span>Зв&apos;язатися з нами</span>
                     <img
                       src={ArrowRight}
                       alt="Стрілка вправо"
-                      className="w-4 h-4"
+                      className="group w-4 h-4 transition group-hover:brightness-0 group-hover:invert"
                     />
                   </Link>
                 </div>

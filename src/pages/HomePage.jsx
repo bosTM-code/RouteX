@@ -10,6 +10,7 @@ import CoachingSection from "../components/CoachingSection";
 import OurCoachingSection from "../components/OurCoachingSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import ProcessSection from "../components/ProcessSection";
+import BlogSection from "../components/BlogSection";
 import SuccessStoriesSection from "../components/SuccessStoriesSection";
 import BlogPreviewSection from "../components/BlogPreviewSection";
 
@@ -28,6 +29,7 @@ function HomePage() {
       <OurCoachingSection />
       <TestimonialsSection />
       <ProcessSection />
+      <BlogSection />
       <SuccessStoriesSection />
       <BlogPreviewSection />
     </div>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function SuccessStoriesSection() {
   const stories = [
     {
@@ -22,12 +24,12 @@ function SuccessStoriesSection() {
 
   return (
     <section className="w-11/12 max-w-6xl mx-auto mb-16">
-      <div className="flex items-center gap-2 mb-3">
-        <p className="uppercase text-darkGreen font-semibold text-xs sm:text-sm tracking-wide">
+      <Link to="/success_story" className="flex items-center gap-2 mb-3">
+        <p className="uppercase text-darkGreen font-semibold text-xs sm:text-sm tracking-wide hover:text-lightGreen">
           Успішні історії
         </p>
         <span className="w-8 h-[2px] bg-lightGreen rounded-full" />
-      </div>
+      </Link>
 
       <div className="flex flex-col md:flex-row justify-between gap-4 mb-8">
         <h2 className="font-bold text-[1.5rem] md:text-[2.2rem] xl:text-[2.6rem] text-darkGreen max-w-[600px] leading-tight">
