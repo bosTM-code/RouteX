@@ -17,7 +17,7 @@ function CountryCard({ title, points = [], flag }) {
       <div className="space-y-2 text-slate-700">
         {points.map((p) => (
           <div className="flex items-start gap-2" key={p}>
-            <img src={Check} className="mt-[3px]" />
+            <img src={Check} alt="check" className="mt-[3px]" />
             <p>{p}</p>
           </div>
         ))}

@@ -4,7 +4,7 @@ import ProcessSection from "../components/ProcessSection";
 import OfferStatsSection from "../components/OfferStatsSection";
 import AvailibleCountriesSection from "../components/AvailibleCountriesSection";
 import Sponsers from "../components/Sponsers";
-
+import AboutContactSection from "../components/AboutContactSection";
 import Travel1 from "../assets/Travel1.jpg";
 import Globe from "../assets/Globe.svg";
 import Security from "../assets/Security.svg";
@@ -19,7 +19,7 @@ function About() {
       <ProcessSection />
       <OfferStatsSection />
       <Sponsers />
-
+      <AboutContactSection />
       {/* Блок 3: Unforgettable Getaways Escaping Routine */}
       <section className="py-16">
         <div className="w-11/12 max-w-5xl mx-auto">
