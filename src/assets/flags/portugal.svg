@@ -1,12 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <clipPath id="circleClip">
-      <circle cx="256" cy="256" r="256" />
+    <clipPath id="ptCircle">
+      <circle cx="256" cy="256" r="256"/>
     </clipPath>
   </defs>
-  <circle cx="256" cy="256" r="256" fill="#ff0000" />
-  <g clip-path="url(#circleClip)">
-    <!-- ліва зелена частина ~2/5 ширини -->
-    <rect width="204.8" height="512" x="0" y="0" fill="#006600" />
+  <g clip-path="url(#ptCircle)">
+    <!-- Ліва зелена, права червона -->
+    <rect width="256" height="512" x="0" fill="#006600"/>
+    <rect width="256" height="512" x="256" fill="#d80027"/>
+    <!-- жовтий диск "герба" -->
+    <circle cx="210" cy="256" r="70" fill="#ffda44"/>
+    <circle cx="210" cy="256" r="45" fill="#ffffff"/>
+    <rect x="200" y="236" width="20" height="40" rx="4" fill="#006600"/>
   </g>
 </svg>

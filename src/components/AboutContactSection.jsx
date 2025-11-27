@@ -1,5 +1,9 @@
 import FindContactBg from "../assets/findContact.svg";
 import ContactPhoto from "../assets/contact-photo.webp";
+import MailGreen from "../assets/mailGreen.svg";
+import PhoneGreen from "../assets/phoneGreen.svg";
+import LocationGreen from "../assets/locationGreen.svg";
+import TelegramGreen from "../assets/telegramGreen.svg";
 
 function AboutContactSection() {
   const handleSubmit = (e) => {
@@ -44,44 +48,74 @@ function AboutContactSection() {
             >
               {/* Email + Телефон */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Email */}
                 <div className="flex flex-col gap-1 text-sm">
                   <label className="text-slate-600">Ваш email</label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="example@mail.com"
-                    className="w-full rounded-full border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:border-lightGreen"
-                  />
+                  <div className="relative">
+                    <input
+                      type="email"
+                      required
+                      placeholder="example@mail.com"
+                      className="w-full rounded-full border border-slate-300 px-4 pr-10 py-2.5 text-sm focus:outline-none focus:border-lightGreen"
+                    />
+                    <img
+                      src={MailGreen}
+                      alt=""
+                      className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4"
+                    />
+                  </div>
                 </div>
 
+                {/* Телефон */}
                 <div className="flex flex-col gap-1 text-sm">
                   <label className="text-slate-600">Ваш телефон</label>
-                  <input
-                    type="tel"
-                    placeholder="+38 (0__) ___ __ __"
-                    className="w-full rounded-full border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:border-lightGreen"
-                  />
+                  <div className="relative">
+                    <input
+                      type="tel"
+                      placeholder="+38 (0__) ___ __ __"
+                      className="w-full rounded-full border border-slate-300 px-4 pr-10 py-2.5 text-sm focus:outline-none focus:border-lightGreen"
+                    />
+                    <img
+                      src={PhoneGreen}
+                      alt=""
+                      className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4"
+                    />
+                  </div>
                 </div>
               </div>
 
               {/* Адреса */}
               <div className="flex flex-col gap-1 text-sm">
                 <label className="text-slate-600">Ваша адреса</label>
-                <input
-                  type="text"
-                  placeholder="Місто, країна"
-                  className="w-full rounded-full border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:border-lightGreen"
-                />
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Місто, країна"
+                    className="w-full rounded-full border border-slate-300 px-4 pr-10 py-2.5 text-sm focus:outline-none focus:border-lightGreen"
+                  />
+                  <img
+                    src={LocationGreen}
+                    alt=""
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4"
+                  />
+                </div>
               </div>
 
               {/* Повідомлення */}
               <div className="flex flex-col gap-1 text-sm">
                 <label className="text-slate-600">Повідомлення</label>
-                <textarea
-                  rows={4}
-                  placeholder="Коротко опишіть вашу ситуацію..."
-                  className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm resize-none focus:outline-none focus:border-lightGreen"
-                />
+                <div className="relative">
+                  <textarea
+                    rows={4}
+                    placeholder="Коротко опишіть вашу ситуацію..."
+                    className="w-full rounded-2xl border border-slate-300 px-4 pr-10 py-3 text-sm resize-none focus:outline-none focus:border-lightGreen"
+                  />
+                  <img
+                    src={TelegramGreen}
+                    alt=""
+                    className="absolute right-3 top-3 w-4 h-4"
+                  />
+                </div>
               </div>
 
               {/* Кнопка */}

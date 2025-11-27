@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 270">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <clipPath id="circleClip">
-      <circle cx="256.5" cy="135" r="135" />
+    <clipPath id="usCircle">
+      <circle cx="256" cy="256" r="256"/>
     </clipPath>
   </defs>
-  <circle cx="256.5" cy="135" r="135" fill="#ffffff" />
-  <g clip-path="url(#circleClip)">
+  <g clip-path="url(#usCircle)">
     <!-- 13 смуг -->
-    <rect width="513" height="270" fill="#ffffff" />
-    <rect width="513" height="20.77" y="0" fill="#b22234" />
-    <rect width="513" height="20.77" y="41.54" fill="#b22234" />
-    <rect width="513" height="20.77" y="83.08" fill="#b22234" />
-    <rect width="513" height="20.77" y="124.62" fill="#b22234" />
-    <rect width="513" height="20.77" y="166.16" fill="#b22234" />
-    <rect width="513" height="20.77" y="207.7" fill="#b22234" />
-    <rect width="513" height="20.77" y="249.24" fill="#b22234" />
-    <!-- синій кантон у верхньому лівому куті (приблизна пропорція) -->
-    <rect width="205.2" height="145.4" x="0" y="0" fill="#3c3b6e" />
+    <rect width="512" height="512" fill="#b22234"/>
+    <g fill="#ffffff">
+      <rect width="512" height="39.4" y="39.4"/>
+      <rect width="512" height="39.4" y="118.2"/>
+      <rect width="512" height="39.4" y="197"/>
+      <rect width="512" height="39.4" y="275.8"/>
+      <rect width="512" height="39.4" y="354.6"/>
+      <rect width="512" height="39.4" y="433.4"/>
+    </g>
+    <!-- Canton -->
+    <rect width="230" height="217" fill="#3c3b6e"/>
   </g>
 </svg>
