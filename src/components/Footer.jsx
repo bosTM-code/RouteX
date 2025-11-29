@@ -22,7 +22,7 @@ const links = [
   { text: "Останні новини блогу", link: "" },
   { text: "Вакансії", link: "" },
   { text: "Загальні запитання", link: "" },
-  { text: "Кейси клієнтів", link: "" },
+  { text: "Кейси клієнтів", link: "/RouteX/success-story" },
 ];
 
 export default function Footer() {

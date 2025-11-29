@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import About from "./pages/About_Us";
 import Success from "./pages/Success_Story";
+import StoryDetails from "./pages/Story_Details";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/success-story" element={<Success />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/story-details" element={<StoryDetails />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
