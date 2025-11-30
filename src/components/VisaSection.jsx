@@ -1,42 +1,9 @@
-import Icon2 from "../assets/GridIcon.svg";
-import BusinessVisa from "../assets/BusinessVisa.jpg";
-import WorkVisa from "../assets/WorkVisa.jpg";
-import StudentVisa from "../assets/StudentVisa.jpg";
-import TravelVisa from "../assets/TravelVisa.jpg";
 import VisaCard from "./VisaCard";
-import Location from "../assets/Location.svg";
-import Security from "../assets/Security.svg";
-import GlobeGreen from "../assets/GlobeGreen.svg";
 import VisaIcon from "../assets/VisaIcon.svg";
-
-const VisaData = [
-  {
-    icon: Security,
-    title: "Бізнес-віза",
-    text: "Консультації та повний супровід при отриманні бізнес-візи для відкриття або ведення компанії за кордоном",
-    img: BusinessVisa,
-  },
-  {
-    icon: Icon2,
-    title: "Робоча віза",
-    text: "Допомагаємо підготувати документи, обрати тип робочої візи та уникнути типових помилок при поданні",
-    img: WorkVisa,
-  },
-  {
-    icon: Location,
-    title: "Студентська віза",
-    text: "Супроводжуємо вступ до університетів та оформлення студентських віз для навчання за кордоном",
-    img: StudentVisa,
-  },
-  {
-    icon: GlobeGreen,
-    title: "Туристична віза",
-    text: "Пояснюємо вимоги до туристичних віз, страхування та підтвердження фінансових гарантій",
-    img: TravelVisa,
-  },
-];
+import { visaData } from "../data/visaData";
 
 function VisaSection() {
+  const homeVisaData = visaData.slice(0, 4);
   return (
     <section className="w-11/12 max-w-[1200px] mx-auto mb-16">
       <div className="text-center mb-10  text-darkGreen">
@@ -58,8 +25,13 @@ function VisaSection() {
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6">
-        {VisaData.map((item) => (
-          <VisaCard key={item.title} {...item} />
+        {homeVisaData.map((item) => (
+          <div
+            key={item.id}
+            className="col-span-1 xl:col-span-2 2xl:max-w-[630px]"
+          >
+            <VisaCard {...item} />
+          </div>
         ))}
       </div>
     </section>

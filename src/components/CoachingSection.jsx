@@ -1,43 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { coachingPrograms } from "../data/coachingPrograms";
+
 import PassGreen from "../assets/PassGreen.svg";
 import ArrowLeftGreen from "../assets/ArrowLeftGreen.svg";
 import ArrowRightGreen from "../assets/ArrowRightGreen.svg";
 import ArrowRight from "../assets/arrowRight.svg";
-import Coaching1 from "../assets/coaching1.jpg";
-import Coaching2 from "../assets/coaching2.webp";
-import Coaching3 from "../assets/coaching3.jpg";
-import Coaching4 from "../assets/coaching4.webp";
-
-const coachingPrograms = [
-  {
-    id: 1,
-    title: "Підготовка до візової співбесіди",
-    description:
-      "Пропрацьовуємо типові питання консула, логіку відповідей і вашу особисту історію, щоб ви почувалися впевнено.",
-    image: Coaching1,
-  },
-  {
-    id: 2,
-    title: "Мовні іспити для імміграції",
-    description:
-      "IELTS, TOEFL, TestDaF, ÖSD — допомагаємо скласти план підготовки, підбираємо формати курсів та матеріали.",
-    image: Coaching2,
-  },
-  {
-    id: 3,
-    title: "Карʼєрний коучинг для релокації",
-    description:
-      "Резюме під ринок цільової країни, LinkedIn-профіль та стратегія пошуку роботи після отримання візи.",
-    image: Coaching3,
-  },
-  {
-    id: 4,
-    title: "Адаптація після переїзду",
-    description:
-      "Розбираємо податкові, побутові та культурні питання: що робити в перші місяці після приїзду.",
-    image: Coaching4,
-  },
-];
 
 function CoachingSection() {
   // показуємо по 3 картки, стрілками можна гортати
@@ -126,13 +94,18 @@ function CoachingSection() {
                   {item.description}
                 </p>
               </div>
-              <button
-                type="button"
+
+              <Link
+                to={`/coaching/${item.id}`}
                 className="flex-shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-lightGreen flex items-center justify-center hover:bg-green-600 transition"
                 aria-label={`Дізнатися більше про: ${item.title}`}
               >
-                <img src={ArrowRight} alt="" className="w-3.5 h-3.5" />
-              </button>
+                <img
+                  src={ArrowRight}
+                  alt="Докладніше"
+                  className="w-3.5 h-3.5"
+                />
+              </Link>
             </div>
           </article>
         ))}

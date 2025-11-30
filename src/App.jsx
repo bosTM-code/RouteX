@@ -7,8 +7,12 @@ import StoryDetails from "./pages/Story_Details";
 import Contact from "./pages/Contact";
 import VisaOffers from "./pages/Visa_Offers";
 import Gallery from "./pages/Gallery";
+import Coaching from "./pages/Coaching";
+import CoachingDetails from "./pages/Coaching_Details";
+import Visa from "./pages/Visa";
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
+import Prices from "./pages/Pricing_Tables";
 
 function App() {
   return (
@@ -24,6 +28,10 @@ function App() {
           <Route path="/story-details" element={<StoryDetails />} />
           <Route path="/visa-offers" element={<VisaOffers />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/pricing-tables" element={<Prices />} />
+          <Route path="/coaching" element={<Coaching />} />
+          <Route path="/coaching/:id" element={<CoachingDetails />} />
+          <Route path="/visa" element={<Visa />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
