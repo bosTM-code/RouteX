@@ -3,14 +3,15 @@ import VisaCard from "./VisaCard";
 
 function VisaPageSection() {
   return (
-    <section className="w-11/12 max-w-[1200px] mx-auto py-14">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-darkGreen mb-8">
-        Усі візові рішення
-      </h1>
-
+    <section className="w-11/12 max-w-[1200px] mx-auto py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {visaData.map((item) => (
-          <VisaCard key={item.id} {...item} to="/visa" />
+          <VisaCard
+            key={item.id}
+            {...item}
+            // перехід у деталі конкретної візи
+            linkTo={`/visa/${item.id}`}
+          />
         ))}
       </div>
     </section>
