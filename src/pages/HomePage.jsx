@@ -4,7 +4,7 @@ import DreamSection from "../components/DreamSection";
 import Sponsers from "../components/Sponsers";
 import CountriesSection from "../components/CountriesSection";
 import VisaSection from "../components/VisaSection";
-import AvailibleCountriesSection from "../components/AvailibleCountriesSection";
+import AvailibleCountriesSection from "../components/AvailableCountriesSection";
 import OfferStatsSection from "../components/OfferStatsSection";
 import CoachingSection from "../components/CoachingSection";
 import OurCoachingSection from "../components/OurCoachingSection";

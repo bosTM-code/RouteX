@@ -1,46 +1,33 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import PassWhite from "../assets/PassWhite.svg";
 import ArrowRightSmall from "../assets/ArrowRightSmall.svg";
 import ArrowLeftSmall from "../assets/ArrowLeftSmall.svg";
 import ArrowRight from "../assets/arrowRight.svg";
-import caFlag from "../assets/flags/canada.svg";
-import deFlag from "../assets/flags/germany.svg";
-import plFlag from "../assets/flags/poland.svg";
-import usFlag from "../assets/flags/usa.svg";
-import ukFlag from "../assets/flags/uk.svg";
+import { countryData } from "../data/countryData";
 
-const countries = [
-  {
-    name: "Канада",
-    description:
-      "Робочі візи, навчальні програми та довгострокове перебування.",
-    flag: caFlag,
-  },
-  {
-    name: "Німеччина",
-    description:
-      "Релокація бізнесу, робочі візи, Blue Card та податкове планування.",
-    flag: deFlag,
-  },
-  {
-    name: "Польща",
-    description: "Робочі візи, тимчасове перебування та карти побиту.",
-    flag: plFlag,
-  },
-  {
-    name: "США",
-    description: "Бізнес-візи, навчання, програми для фахівців.",
-    flag: usFlag,
-  },
-  {
-    name: "Велика Британія",
-    description: "Візи для фахівців, підприємців та студентів.",
-    flag: ukFlag,
-  },
-];
+// Країни, які показуємо в цьому слайдері
+const sliderCountryIds = ["canada", "germany", "poland", "usa", "uk"];
 
 function CountriesSection() {
   const [activeIndex, setActiveIndex] = useState(1); // друга картка активна за замовчуванням
+  const navigate = useNavigate();
+
+  // Беремо потрібні країни з загального масиву
+  const countries = useMemo(
+    () =>
+      countryData
+        .filter((c) => sliderCountryIds.includes(c.id))
+        .map((c) => ({
+          id: c.id,
+          name: c.name,
+          description: c.shortDescription, // використовуємо shortDescription
+          flag: c.flag,
+        })),
+    []
+  );
+
+  if (!countries.length) return null;
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev - 1 + countries.length) % countries.length);
@@ -96,13 +83,13 @@ function CountriesSection() {
 
           return (
             <div
-              key={country.name}
+              key={country.id}
               className={
                 "h-full flex flex-col justify-between bg-gray-400/30 rounded-xl " +
                 cardCols
               }
             >
-              {/* НЕактивна картка: кружок вгорі, назва внизу */}
+              {/* НЕактивна картка */}
               {!isActive && (
                 <>
                   <div className="self-end p-5">
@@ -130,7 +117,7 @@ function CountriesSection() {
                 </>
               )}
 
-              {/* АКТИВНА картка: назва ліворуч, кружок праворуч + зелений блок з описом */}
+              {/* АКТИВНА картка */}
               {isActive && (
                 <>
                   <div className="flex items-center justify-between px-5 pt-5">
@@ -158,7 +145,11 @@ function CountriesSection() {
                     <p className="text-xs sm:text-sm text-white/90">
                       {country.description}
                     </p>
-                    <button className="self-start flex gap-2 items-center px-6 py-3 border border-white rounded-full hover:shadow-2xl transition-all duration-300">
+                    <button
+                      type="button"
+                      onClick={() => navigate(`/countries/${country.id}`)}
+                      className="self-start flex gap-2 items-center px-6 py-3 border border-white rounded-full hover:shadow-2xl transition-all duration-300"
+                    >
                       <span className="text-sm font-semibold">Детальніше</span>
                       <img src={ArrowRight} alt="Стрілка вправо" />
                     </button>

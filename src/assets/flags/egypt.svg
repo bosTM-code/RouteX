@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="egCircle">
+      <circle cx="256" cy="256" r="256"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#egCircle)">
+    <rect width="512" height="170" fill="#ce1126"/>
+    <rect y="170" width="512" height="170" fill="#ffffff"/>
+    <rect y="340" width="512" height="170" fill="#000000"/>
+
+    <!-- simplified gold emblem -->
+    <circle cx="256" cy="256" r="38" fill="#c9a400"/>
+  </g>
+</svg>

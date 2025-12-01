@@ -152,7 +152,10 @@ function DreamSection() {
 
           {/* actions */}
           <div className="mt-7 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            <Link className="inline-flex items-center gap-3 rounded-full border border-[#86D946] bg-white px-6 py-3 text-[#0B4F39] hover:shadow transition">
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-3 rounded-full border border-[#86D946] bg-white px-6 py-3 text-[#0B4F39] hover:shadow transition"
+            >
               Дізнатися більше
               <img src={ArrowRightGreen} alt="Стрілка вправо" />
             </Link>

@@ -1,28 +1,40 @@
-import Check from "../assets/CheckDark.svg";
+// src/components/CountryCard.jsx
+import CheckIcon from "../assets/checkDark.svg";
 
-function CountryCard({ title, points = [], flag }) {
+function CountryCard({ title, points, flag, shortDescription }) {
+  // Якщо points є – беремо їх, інакше показуємо короткий опис
+  const items =
+    points && points.length
+      ? points.slice(0, 3)
+      : shortDescription
+        ? [shortDescription]
+        : [];
+
   return (
-    <article className="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
-      {/* Кружок з прапором */}
-      <div className="w-14 h-14 rounded-full overflow-hidden border border-lightGreen self-start">
-        <img
-          src={flag}
-          alt={`Прапор ${title}`}
-          className="w-full h-full object-cover"
-        />
+    <div className="bg-white rounded-2xl shadow-sm border border-[#E6EDE7] p-8 flex flex-col items-start hover:shadow-md transition cursor-pointer">
+      {/* Прапор у кружечку */}
+      <div className="w-14 h-14 rounded-full flex items-center justify-center border-2 border-lightGreen mb-5 overflow-hidden">
+        <img src={flag} alt={title} className="w-10 h-10 object-cover" />
       </div>
 
-      <h4 className="text-lg font-bold text-darkGreen">{title}</h4>
+      {/* Назва */}
+      <h4 className="font-semibold text-lg text-darkGreen mb-4">{title}</h4>
 
-      <div className="space-y-2 text-slate-700">
-        {points.map((p) => (
-          <div className="flex items-start gap-2" key={p}>
-            <img src={Check} alt="check" className="mt-[3px]" />
-            <p>{p}</p>
-          </div>
-        ))}
-      </div>
-    </article>
+      {/* Список / опис */}
+      {!!items.length && (
+        <ul className="space-y-2">
+          {items.map((text, idx) => (
+            <li
+              key={idx}
+              className="flex items-center gap-2 text-sm text-[#3b4a3f]"
+            >
+              <img src={CheckIcon} alt="" className="w-4 h-4" />
+              <span>{text}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
 

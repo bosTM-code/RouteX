@@ -28,13 +28,13 @@ function Hero() {
         {/* BUTTONS */}
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <Link
-            to="/about"
+            to="/visa"
             className="px-6 py-3 bg-lightGreen text-white rounded-full font-medium hover:bg-green-600 transition"
           >
             Дізнатися більше →
           </Link>
           <Link
-            to="/blog"
+            to="https://www.youtube.com/watch?v=_nb00evb-68&list=PPSV"
             className="px-6 py-3 border border-white text-white rounded-full font-medium hover:bg-white hover:text-darkGreen transition"
           >
             ▶ Переглянути відео

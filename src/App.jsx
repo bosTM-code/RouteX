@@ -11,6 +11,8 @@ import Coaching from "./pages/Coaching";
 import CoachingDetails from "./pages/Coaching_Details";
 import Visa from "./pages/Visa";
 import VisaDetails from "./pages/Visa_Details";
+import Countries from "./pages/Countries";
+import CountryDetails from "./pages/Country_Details";
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
 import Prices from "./pages/Pricing_Tables";
@@ -34,6 +36,8 @@ function App() {
           <Route path="/coaching/:id" element={<CoachingDetails />} />
           <Route path="/visa" element={<Visa />} />
           <Route path="/visa/:id" element={<VisaDetails />} />
+          <Route path="/countries" element={<Countries />} />
+          <Route path="/countries/:id" element={<CountryDetails />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
