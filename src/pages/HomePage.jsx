@@ -11,7 +11,6 @@ import OurCoachingSection from "../components/OurCoachingSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import ProcessSection from "../components/ProcessSection";
 import BlogSection from "../components/BlogSection";
-import BlogPreviewSection from "../components/BlogPreviewSection";
 
 function HomePage() {
   return (
@@ -29,7 +28,6 @@ function HomePage() {
       <TestimonialsSection />
       <ProcessSection />
       <BlogSection />
-      <BlogPreviewSection />
     </div>
   );
 }

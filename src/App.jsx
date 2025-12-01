@@ -13,6 +13,8 @@ import Visa from "./pages/Visa";
 import VisaDetails from "./pages/Visa_Details";
 import Countries from "./pages/Countries";
 import CountryDetails from "./pages/Country_Details";
+import Blog from "./pages/Blog";
+import BlogDetails from "./pages/Blog_Details";
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
 import Prices from "./pages/Pricing_Tables";
@@ -38,6 +40,8 @@ function App() {
           <Route path="/visa/:id" element={<VisaDetails />} />
           <Route path="/countries" element={<Countries />} />
           <Route path="/countries/:id" element={<CountryDetails />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>

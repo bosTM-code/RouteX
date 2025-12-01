@@ -1,67 +1,28 @@
+// src/components/BlogSection.jsx
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import PassGreen from "../assets/PassGreen.svg";
 import ArrowLeftSmall from "../assets/ArrowLeftGreen.svg";
 import ArrowRightSmall from "../assets/ArrowRightGreen.svg";
 import ArrowRight from "../assets/arrowRightGreenSmall.svg";
-import Visa from "../assets/BusinessVisa.webp";
-import Europe from "../assets/europe.jpg";
-import Study from "../assets/study.webp";
-import Doc from "../assets/doc-na-vizu.jpeg";
-
-const posts = [
-  {
-    id: 1,
-    date: "19 жовтня 2024",
-    author: "Admin",
-    title: "5 кроків до успішної візової співбесіди в консульстві",
-    excerpt:
-      "Як підготуватися до запитань консула, що брати з собою та чого краще уникати під час інтерв’ю.",
-    img: Visa,
-  },
-  {
-    id: 2,
-    date: "12 листопада 2024",
-    author: "Admin",
-    title: "Робочі візи до ЄС: що змінилося у 2024 році",
-    excerpt:
-      "Огляд основних програм для фахівців, оновлені вимоги та типові помилки заявників.",
-    img: Europe,
-  },
-  {
-    id: 3,
-    date: "02 грудня 2024",
-    author: "Admin",
-    title: "Навчання за кордоном: як обрати країну та програму",
-    excerpt:
-      "Порівнюємо Канаду, Німеччину й Польщу: вартість, вимоги до абітурієнтів та перспективи після випуску.",
-    img: Study,
-  },
-  {
-    id: 4,
-    date: "20 грудня 2024",
-    author: "Admin",
-    title: "Як підготувати ідеальний візовий пакет документів",
-    excerpt:
-      "Чекліст документів, переклади, апостиль і нотаріальне завірення — що важливо зробити завчасно.",
-    img: Doc,
-  },
-];
+import { blogPosts } from "../data/blogData";
 
 function BlogSection() {
   const [startIndex, setStartIndex] = useState(0);
+  const navigate = useNavigate();
   const visibleCount = 3;
 
   const handlePrev = () => {
-    setStartIndex((prev) => (prev - 1 + posts.length) % posts.length);
+    setStartIndex((prev) => (prev - 1 + blogPosts.length) % blogPosts.length);
   };
 
   const handleNext = () => {
-    setStartIndex((prev) => (prev + 1) % posts.length);
+    setStartIndex((prev) => (prev + 1) % blogPosts.length);
   };
 
   const visiblePosts = [];
-  for (let i = 0; i < Math.min(visibleCount, posts.length); i++) {
-    visiblePosts.push(posts[(startIndex + i) % posts.length]);
+  for (let i = 0; i < Math.min(visibleCount, blogPosts.length); i++) {
+    visiblePosts.push(blogPosts[(startIndex + i) % blogPosts.length]);
   }
 
   return (
@@ -117,13 +78,15 @@ function BlogSection() {
             key={post.id}
             className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col"
           >
-            {/* Верхній сірий блок під картинку */}
+            {/* Верхній блок під картинку */}
             <div className="bg-slate-200 h-44 sm:h-52 lg:h-56 w-full">
-              <img
-                src={post.img}
-                alt="post.title"
-                className="w-full h-full object-cover"
-              />
+              {post.img && (
+                <img
+                  src={post.img}
+                  alt={post.title}
+                  className="w-full h-full object-cover"
+                />
+              )}
             </div>
 
             {/* Текстова частина */}
@@ -147,13 +110,14 @@ function BlogSection() {
               {/* Read more */}
               <button
                 type="button"
+                onClick={() => navigate(`/blog/${post.id}`)}
                 className="group mt-2 inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-darkGreen hover:text-lightGreen transition"
               >
                 <span>Читати далі</span>
                 <img
                   src={ArrowRight}
                   alt="ArrowRight"
-                  className="group w-3.5 h-3.5 group-hover:invert transition"
+                  className="w-3.5 h-3.5 group-hover:invert transition"
                 />
               </button>
             </div>
