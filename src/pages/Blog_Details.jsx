@@ -44,9 +44,7 @@ function BlogDetails() {
         {/* Ліва колонка – основний контент */}
         <div className="space-y-8">
           <article className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
-            {/* велика картинка / заглушка */}
-            <div className="bg-slate-200 h-56 sm:h-72 lg:h-80 w-full" />
-
+            {post.image && <img src={post.image} alt={post.title} />}
             <div className="p-6 sm:p-8">
               {/* мета */}
               <div className="flex flex-wrap gap-4 text-xs text-slate-500 mb-3">

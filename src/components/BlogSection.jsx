@@ -80,9 +80,9 @@ function BlogSection() {
           >
             {/* Верхній блок під картинку */}
             <div className="bg-slate-200 h-44 sm:h-52 lg:h-56 w-full">
-              {post.img && (
+              {post.image && (
                 <img
-                  src={post.img}
+                  src={post.image}
                   alt={post.title}
                   className="w-full h-full object-cover"
                 />
