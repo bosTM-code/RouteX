@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-// import LogoSvg from "../assets/Logo.svg";
 import LogoMin from "../assets/Logo_min.svg";
 import ArrowDown from "../assets/ArrowDown.svg";
 import ArrowRight from "../assets/arrowRight.svg";
@@ -35,6 +34,28 @@ const navLinks = [
     label: "Контакти",
   },
 ];
+
+function CtaButton({ className = "", onClick }) {
+  return (
+    <Link
+      to="/contact"
+      onClick={onClick}
+      className={
+        "flex items-center bg-lightGreen px-4 py-2 sm:px-5 sm:py-3 rounded-full text-xs sm:text-sm lg:text-base text-white gap-2 max-w-[260px] hover:bg-green-600 transition " +
+        className
+      }
+    >
+      <span className="whitespace-normal leading-snug text-center">
+        Записатися на консультацію
+      </span>
+      <img
+        src={ArrowRight}
+        alt="Перейти до запису"
+        className="w-4 h-4 sm:w-5 sm:h-5"
+      />
+    </Link>
+  );
+}
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -76,20 +97,8 @@ function Navbar() {
             </div>
           ))}
         </nav>
-        <button
-          className="flex items-center bg-lightGreen px-4 py-2 sm:px-5 sm:py-3 rounded-full 
-             text-xs sm:text-sm lg:text-base text-white gap-2 max-w-[260px] 
-             hover:bg-green-600 transition"
-        >
-          <span className="whitespace-normal leading-snug text-center">
-            Записатися на консультацію
-          </span>
-          <img
-            src={ArrowRight}
-            alt="Перейти до запису"
-            className="w-4 h-4 sm:w-5 sm:h-5"
-          />
-        </button>
+        {/* CTA – тільки на десктопі */}
+        <CtaButton className="hidden lg:flex" />
 
         {/* BURGER MOBILE */}
 
@@ -131,7 +140,7 @@ function Navbar() {
       {/* MOBILE ON CLICK NAV ON CLICK SLIDE ANIMATION*/}
 
       <div
-        className={`fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg flex flex-col items-start gap-5 p-10 transition-transform duration-500 ease-in-out lg:hidden z-[999] ${
+        className={`fixed top-0 right-0 h-full w-4/9 bg-white shadow-lg flex flex-col items-start gap-5 p-10 transition-transform duration-500 ease-in-out lg:hidden z-[999] ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -145,6 +154,11 @@ function Navbar() {
             </NavLink>
           </div>
         ))}
+        {/* CTA внизу мобільного меню */}
+        <CtaButton
+          className="mt-auto w-full justify-center"
+          onClick={openBurger}
+        />
       </div>
     </header>
   );
