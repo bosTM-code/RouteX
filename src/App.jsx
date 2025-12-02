@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
@@ -15,14 +16,19 @@ import Countries from "./pages/Countries";
 import CountryDetails from "./pages/Country_Details";
 import Blog from "./pages/Blog";
 import BlogDetails from "./pages/Blog_Details";
+import Team from "./pages/Team";
+import TeamDetails from "./pages/Team_Details";
+import Faq from "./pages/FAQ";
 import Error from "./pages/Error";
 import Footer from "./components/Footer";
 import Prices from "./pages/Pricing_Tables";
+import ConsultationModal from "./components/ConsultationModal";
 
 function App() {
+  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
-      <Navbar />
+      <Navbar onOpenConsultation={() => setIsConsultationOpen(true)} />
 
       <main className="flex-1 pt-16 sm:pt-20 md:pt-24 lg:pt-[120.63px]">
         <Routes>
@@ -40,13 +46,19 @@ function App() {
           <Route path="/visa/:id" element={<VisaDetails />} />
           <Route path="/countries" element={<Countries />} />
           <Route path="/countries/:id" element={<CountryDetails />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/team/:id" element={<TeamDetails />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogDetails />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>
-
       <Footer />
+      <ConsultationModal
+        isOpen={isConsultationOpen}
+        onClose={() => setIsConsultationOpen(false)}
+      />
     </div>
   );
 }

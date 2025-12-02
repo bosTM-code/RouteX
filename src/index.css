@@ -1,3 +1,45 @@
+/* stylelint-disable at-rule-no-unknown */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+
+/* @layer base {
+  html {
+    @apply font-sans;
+  }
+} */
+
+/* src/index.css або main.css */
+
+@font-face {
+  font-family: "PP Object Sans";
+  src: url("./assets/fonts/ObjectSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Object Sans";
+  src: url("./assets/fonts/ObjectSans-Regular.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Object Sans";
+  src: url("./assets/fonts/ObjectSans-Heavy.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Object Sans";
+  src: url("./assets/fonts/ObjectSans-Heavy.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

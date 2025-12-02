@@ -14,20 +14,27 @@ const navLinks = [
     label: "Про нас",
   },
   {
-    to: "/service",
+    to: "/visa",
     label: "Послуги",
   },
   {
-    to: "/project",
-    label: "проєкти",
+    to: "/success-story",
+    label: "Проєкти",
   },
   {
     to: "/blog",
     label: "Блог",
   },
   {
-    to: "/page",
     label: "Сторінки",
+    children: [
+      { to: "/countries", label: "Країни" },
+      { to: "/team", label: "Команда" },
+      { to: "/faq", label: "FAQ" },
+      { to: "/gallery", label: "Галерея" },
+      { to: "/coaching", label: "Coaching" },
+      { to: "/pricing-tables", label: "Ціни" },
+    ],
   },
   {
     to: "/contact",
@@ -35,10 +42,11 @@ const navLinks = [
   },
 ];
 
+// Кнопка CTA
 function CtaButton({ className = "", onClick }) {
   return (
-    <Link
-      to="/contact"
+    <button
+      type="button"
       onClick={onClick}
       className={
         "flex items-center bg-lightGreen px-4 py-2 sm:px-5 sm:py-3 rounded-full text-xs sm:text-sm lg:text-base text-white gap-2 max-w-[260px] hover:bg-green-600 transition " +
@@ -53,12 +61,13 @@ function CtaButton({ className = "", onClick }) {
         alt="Перейти до запису"
         className="w-4 h-4 sm:w-5 sm:h-5"
       />
-    </Link>
+    </button>
   );
 }
 
-function Navbar() {
+function Navbar({ onOpenConsultation = () => {} }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null); // для "Сторінки"
 
   const openBurger = () => {
     setMobileOpen((prev) => !prev);
@@ -83,25 +92,60 @@ function Navbar() {
           </div>
         </Link>
 
-        {/* NAVIGATION DESCTOP */}
+        {/* NAVIGATION DESKTOP */}
         <nav className="hidden lg:flex items-center justify-between gap-5">
-          {navLinks.map((item) => (
-            <div
-              key={item.to}
-              className="flex items-center gap-0 uppercase text-sm text-darkGreen font-semibold xl:text-base hover:text-green-700 transition-colors duration-200"
-            >
-              <NavLink to={item.to}>{item.label}</NavLink>
-              <button>
-                <img src={ArrowDown} alt="arrowdown" />
-              </button>
-            </div>
-          ))}
+          {navLinks.map((item) =>
+            item.children ? (
+              // ДРОПДАУН "СТОРІНКИ" ПО КЛІКУ
+              <div
+                key={item.label}
+                className="relative"
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenDropdown((prev) =>
+                      prev === item.label ? null : item.label
+                    )
+                  }
+                  className="flex items-center gap-1 uppercase text-sm xl:text-base font-semibold text-darkGreen hover:text-green-700"
+                >
+                  {item.label}
+                  <img src={ArrowDown} alt="arrowdown" />
+                </button>
+
+                {openDropdown === item.label && (
+                  <div className="absolute left-0 mt-0 bg-white rounded-2xl shadow-lg border border-slate-100 min-w-[180px] py-2 z-[1000]">
+                    {item.children.map((child) => (
+                      <NavLink
+                        key={child.to}
+                        to={child.to}
+                        onClick={() => setOpenDropdown(null)}
+                        className="block px-4 py-2 text-sm text-darkGreen hover:bg-slate-50"
+                      >
+                        {child.label}
+                      </NavLink>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className="uppercase text-sm xl:text-base font-semibold text-darkGreen hover:text-green-700"
+              >
+                {item.label}
+              </NavLink>
+            )
+          )}
         </nav>
+
         {/* CTA – тільки на десктопі */}
-        <CtaButton className="hidden lg:flex" />
+        <CtaButton className="hidden lg:flex" onClick={onOpenConsultation} />
 
         {/* BURGER MOBILE */}
-
         <button
           className="lg:hidden z-[1000] flex flex-col justify-between w-10 sm:w-12 md:w-14 h-8 sm:h-10 md:h-12"
           onClick={openBurger}
@@ -128,8 +172,7 @@ function Navbar() {
         </button>
       </div>
 
-      {/* BACKDROP GREY BG BEHIND MENU*/}
-
+      {/* BACKDROP */}
       <div
         className={`fixed inset-0 bg-black/50 transition-opacity duration-500 z-[999] ${
           mobileOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -137,27 +180,48 @@ function Navbar() {
         onClick={openBurger}
       />
 
-      {/* MOBILE ON CLICK NAV ON CLICK SLIDE ANIMATION*/}
-
+      {/* MOBILE MENU */}
       <div
-        className={`fixed top-0 right-0 h-full w-4/9 bg-white shadow-lg flex flex-col items-start gap-5 p-10 transition-transform duration-500 ease-in-out lg:hidden z-[999] ${
+        className={`fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg flex flex-col items-center gap-5 p-10 transition-transform duration-500 ease-in-out lg:hidden z-[999] ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {navLinks.map((item) => (
-          <div
-            key={item.to}
-            className="uppercase text-sm font-semibold text-darkGreen"
-          >
-            <NavLink to={item.to} onClick={openBurger}>
-              {item.label}
-            </NavLink>
-          </div>
-        ))}
+        {navLinks.map((item) =>
+          item.children ? (
+            <div key={item.label} className="w-full">
+              <p className="uppercase text-xs font-semibold text-slate-400 mb-1 text-center">
+                {item.label}
+              </p>
+              {item.children.map((child) => (
+                <div
+                  key={child.to}
+                  className="uppercase text-sm font-semibold text-darkGreen mb-2 text-center"
+                >
+                  <NavLink to={child.to} onClick={openBurger}>
+                    {child.label}
+                  </NavLink>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div
+              key={item.to}
+              className="uppercase text-sm font-semibold text-darkGreen text-center"
+            >
+              <NavLink to={item.to} onClick={openBurger}>
+                {item.label}
+              </NavLink>
+            </div>
+          )
+        )}
+
         {/* CTA внизу мобільного меню */}
         <CtaButton
-          className="mt-auto w-full justify-center"
-          onClick={openBurger}
+          className="w-full justify-center mt-auto"
+          onClick={() => {
+            openBurger();
+            onOpenConsultation();
+          }}
         />
       </div>
     </header>
