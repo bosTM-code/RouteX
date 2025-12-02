@@ -27,7 +27,7 @@ import ConsultationModal from "./components/ConsultationModal";
 function App() {
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50">
+    <div className="overflow-x-hidden min-h-screen flex flex-col bg-slate-50">
       <Navbar onOpenConsultation={() => setIsConsultationOpen(true)} />
       <main className="flex-1 pt-16 sm:pt-20 md:pt-24 lg:pt-[120.63px]">
         <Routes>
