@@ -30,7 +30,6 @@ function Team() {
                   />
                 )}
 
-                {/* вертикальний стовпчик соцмереж справа, як у Figma */}
                 {member.socials &&
                   (member.socials.facebook ||
                     member.socials.instagram ||

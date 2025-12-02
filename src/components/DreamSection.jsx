@@ -60,7 +60,7 @@ function DreamSection() {
             <div className="flex-[0.75] min-[1021px]:max-[1314px]:flex-[0.5]">
               <img
                 src={Travel2}
-                alt=""
+                alt="Літак та острів в океані"
                 className="w-full h-full object-cover rounded-xl sm:rounded-2xl"
               />
             </div>
@@ -153,7 +153,7 @@ function DreamSection() {
           {/* actions */}
           <div className="mt-7 flex flex-col sm:flex-row items-start sm:items-center gap-6">
             <Link
-              to="/about"
+              to="/contact"
               className="inline-flex items-center gap-3 rounded-full border border-[#86D946] bg-white px-6 py-3 text-[#0B4F39] hover:shadow transition"
             >
               Дізнатися більше

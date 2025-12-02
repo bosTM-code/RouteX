@@ -1,26 +1,28 @@
 import QuoteIcon from "../assets/quoteGreen.svg";
+import { Link } from "react-router-dom";
 
-function SuccessStoryCard({ text, name, role, bg }) {
+function SuccessStoryCard({ id, name, role, text, bg }) {
   return (
-    <article
-      className={`${bg} hover:bg-[#E6F1DD] transition rounded-2xl shadow-sm px-7 py-7 flex flex-col justify-between h-full`}
+    <Link
+      to={`/success-story/${id}`}
+      className={`block rounded-3xl p-6 sm:p-7 lg:p-8 ${bg} hover:shadow-md transition-shadow`}
     >
-      <img src={QuoteIcon} alt="" className="w-5 h-5 mb-4" />
+      <img src={QuoteIcon} alt="QuoteIcon" className="w-5 h-5 mb-4" />
+      <p className="text-sm sm:text-base text-slate-700 mb-4">{text}</p>
+      <div className="mt-4 border-t border-slate-200 pt-4">
+        <p className="font-semibold text-darkGreen text-sm sm:text-base">
+          {name}
+        </p>
+        <p className="text-xs sm:text-sm text-slate-500 mt-1">{role}</p>
 
-      <p className="text-[15px] sm:text-base leading-relaxed text-slate-700 mb-6">
-        {text}
-      </p>
-
-      <div className="flex items-center gap-3 mt-auto">
-        <div className="w-10 h-10 rounded-full bg-slate-200" />
-        <div className="space-y-0.5">
-          <p className="text-[15px] sm:text-[16px] font-semibold text-darkGreen">
-            {name}
-          </p>
-          <p className="text-xs sm:text-sm text-slate-500">{role}</p>
-        </div>
+        <button
+          type="button"
+          className="mt-3 text-xs sm:text-sm font-semibold text-lightGreen hover:underline"
+        >
+          Детальніше
+        </button>
       </div>
-    </article>
+    </Link>
   );
 }
 

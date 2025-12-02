@@ -1,10 +1,9 @@
-// src/data/teamData.js
 import Coach1 from "../assets/coach1.jpg";
 import Coach2 from "../assets/coach2.jpg";
 import Coach3 from "../assets/coach3.jpg";
-
-// якщо немає реальних фото для решти – можна залишити null,
-// картка покаже сірий плейсхолдер
+import RonaldPhoto from "../assets/Romald.jpg";
+import AnnettePhoto from "../assets/Annette.jpg";
+import CodyPhoto from "../assets/Koddi.jpeg";
 
 export const teamMembers = [
   {
@@ -86,7 +85,7 @@ export const teamMembers = [
     id: "ronald-richards",
     name: "Рональд Річардс",
     role: "Візовий аналітик",
-    photo: null,
+    photo: RonaldPhoto,
     responsibility: "Аналіз міграційних програм і шансів клієнта",
     experience: "6 років",
     email: "ronald@routex.com",
@@ -104,7 +103,7 @@ export const teamMembers = [
     id: "annette-black",
     name: "Анетт Блек",
     role: "Координатор подач",
-    photo: null,
+    photo: AnnettePhoto,
     responsibility: "Організація подачі документів у консульства",
     experience: "5 років",
     email: "annette@routex.com",
@@ -122,7 +121,7 @@ export const teamMembers = [
     id: "cody-fisher",
     name: "Коді Фішер",
     role: "Web-дизайнер",
-    photo: null,
+    photo: CodyPhoto,
     responsibility: "Дизайн особистих сторінок експертів та клієнтських кабінетів",
     experience: "4 роки",
     email: "cody@routex.com",

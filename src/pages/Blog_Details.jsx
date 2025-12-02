@@ -83,10 +83,10 @@ function BlogDetails() {
             <div className="flex gap-2 text-xs text-slate-500">
               <span>Поширити:</span>
               {/* соцмережі внизу фото */}
-              <a href="x.com" aria-label="X / Twitter">
+              <a href="https://x.com" aria-label="X / Twitter">
                 <img src={XIcon} alt="" className="w-4 h-4" />
               </a>
-              <a href="facebook.com" aria-label="Facebook">
+              <a href="https://facebook.com" aria-label="Facebook">
                 <img src={Facebook} alt="" className="w-4 h-4" />
               </a>
               <a href="https://www.instagram.com/" aria-label="Instagram">

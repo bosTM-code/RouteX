@@ -1,19 +1,20 @@
-import Travel1 from "../assets/Travel1.jpg";
-import Travel2 from "../assets/Travel2.png";
+import VisaTripy from "../assets/viza-tipu.webp";
+import TripCanada from "../assets/trip-canada.webp";
 import Paris1 from "../assets/paris.jpg";
-import Paris2 from "../assets/paris2.jpg";
-import Paris3 from "../assets/paris3.png";
+import Amsterdam from "../assets/amsterdam.gif";
+import Lisabon from "../assets/lisabon.jpg";
+import visaViden from "../assets/visa-viden.jpg";
 
 const galleryItems = [
   {
     id: 1,
-    image: Travel1,
+    image: VisaTripy,
     title: "Консультація перед поданням на візу",
     location: "Мюнхен, Німеччина",
   },
   {
     id: 2,
-    image: Travel2,
+    image: TripCanada,
     title: "Підготовка до переїзду всією сімʼєю",
     location: "Торонто, Канада",
   },
@@ -25,19 +26,19 @@ const galleryItems = [
   },
   {
     id: 4,
-    image: Paris2,
+    image: Amsterdam,
     title: "Навчання за кордоном",
     location: "Амстердам, Нідерланди",
   },
   {
     id: 5,
-    image: Paris3,
+    image: Lisabon,
     title: "Карʼєра в іноземній компанії",
     location: "Лісабон, Португалія",
   },
   {
     id: 6,
-    image: Travel1,
+    image: visaViden,
     title: "Нова віза — нові можливості",
     location: "Відень, Австрія",
   },

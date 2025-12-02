@@ -3,6 +3,9 @@ import Visa from "../assets/BusinessVisa.webp";
 import Europe from "../assets/europe.jpg";
 import Study from "../assets/study.webp";
 import Doc from "../assets/doc-na-vizu.jpeg";
+import TripEgypt from "../assets/trip-egypt.png";
+import NewHorizons from "../assets/new-horizons.jpg";
+import HiddenSkarby from "../assets/hidden-skarby.webp";
 
 export const blogPosts = [
   {
@@ -96,7 +99,7 @@ export const blogPosts = [
     category: "Туристичні напрямки",
     tag: "Подорожі",
     tags: ["Єгипет", "подорожі", "морські курорти"],
-    image: null,
+    image: TripEgypt,
     excerpt:
       "Єгипет — це більше, ніж просто піраміди та Червоне море. Це країна, де історія дихає в кожному камені, а сучасний сервіс поєднується з давніми традиціями.",
     content: [
@@ -116,7 +119,7 @@ export const blogPosts = [
     category: "Релокація та імміграція",
     tag: "Релокація",
     tags: ["релокація", "робота за кордоном", "візи"],
-    image: null,
+    image: NewHorizons,
     excerpt:
       "Релокація — це не лише про зміну країни, а й про зміну способу життя. Розбираємося, з чого почати та яких помилок уникнути на старті.",
     content: [
@@ -136,7 +139,7 @@ export const blogPosts = [
     category: "Натхнення для подорожей",
     tag: "Подорожі",
     tags: ["авторські тури", "нетуристичні місця"],
-    image: null,
+    image: HiddenSkarby,
     excerpt:
       "Не всі найцікавіші місця світу потрапляють у топ-10 туристичних рейтингів. Розповідаємо про формат подорожей, коли головна мета — відкрити щось своє.",
     content: [

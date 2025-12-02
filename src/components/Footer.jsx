@@ -19,9 +19,9 @@ const services = [
 ];
 
 const links = [
-  { text: "Останні новини блогу", link: "" },
-  { text: "Вакансії", link: "" },
-  { text: "Загальні запитання", link: "" },
+  { text: "Останні новини блогу", link: "/RouteX/blog" },
+  { text: "Вакансії", link: "/RouteX/team" },
+  { text: "Загальні запитання", link: "/RouteX/faq" },
   { text: "Кейси клієнтів", link: "/RouteX/success-story" },
 ];
 

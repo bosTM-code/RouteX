@@ -143,14 +143,13 @@ function CountryDetails() {
                 <span>Онлайн-консультація, запис за попереднім зверненням</span>
               </li>
             </ul>
-
-            <button
-              type="button"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#1C7C54] hover:underline"
+            <Link
+              to="/contact"
+              className="mt-6 inline-flex items-center gap-0,5 text-sm font-medium text-[#1C7C54] hover:underline"
             >
               Звʼязатися з нами
               <span aria-hidden="true">↗</span>
-            </button>
+            </Link>
           </div>
 
           {/* Картка "Обрати країну" */}

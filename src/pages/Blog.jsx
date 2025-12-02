@@ -1,4 +1,3 @@
-// src/pages/Blog.jsx
 import { Link } from "react-router-dom";
 import HeroCommon from "../components/HeroCommon";
 import {
@@ -22,7 +21,15 @@ function Blog() {
               className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden"
             >
               {/* картинка / заглушка */}
-              <div className="bg-slate-200 h-52 sm:h-64 lg:h-72 w-full" />
+              <div className="bg-slate-200 h-52 sm:h-64 lg:h-72 w-full">
+                {post.image && (
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover"
+                  />
+                )}
+              </div>
 
               <div className="p-6 sm:p-8">
                 {/* мета */}

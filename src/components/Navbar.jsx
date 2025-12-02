@@ -32,7 +32,7 @@ const navLinks = [
       { to: "/team", label: "Команда" },
       { to: "/faq", label: "FAQ" },
       { to: "/gallery", label: "Галерея" },
-      { to: "/coaching", label: "Coaching" },
+      { to: "/coaching", label: "Коучинг" },
       { to: "/pricing-tables", label: "Ціни" },
     ],
   },

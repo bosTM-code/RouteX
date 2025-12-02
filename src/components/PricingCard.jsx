@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CheckGreen from "../assets/CheckGreen.svg";
 
 function PricingCard({ title, price, features }) {
@@ -35,7 +36,9 @@ function PricingCard({ title, price, features }) {
             type="button"
             className="px-7 py-2 rounded-full border border-lightGreen text-darkGreen text-sm font-medium hover:bg-lightGreen hover:text-white transition-all flex items-center gap-2"
           >
-            Обрати тариф →
+            <Link to="/contact" className="hover:text-white">
+              Обрати тариф →
+            </Link>
           </button>
         </div>
       </div>

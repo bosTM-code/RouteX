@@ -116,7 +116,6 @@ function SuccessStoriesSection() {
       {/* грід: 1 колонка на мобілці, 2 – на md+ */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
         {pageItems.map((story, idx) => {
-          // idx – індекс у межах поточної сторінки
           const row = Math.floor(idx / cols);
           const col = idx % cols;
 
@@ -126,6 +125,7 @@ function SuccessStoriesSection() {
           return (
             <SuccessStoryCard
               key={story.id}
+              id={story.id} // ✅ ДОДАЛИ
               text={story.text}
               name={story.name}
               role={story.role}
