@@ -29,7 +29,6 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
       <Navbar onOpenConsultation={() => setIsConsultationOpen(true)} />
-
       <main className="flex-1 pt-16 sm:pt-20 md:pt-24 lg:pt-[120.63px]">
         <Routes>
           <Route path="/" element={<HomePage />} />
