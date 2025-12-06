@@ -14,8 +14,13 @@ const navLinks = [
     label: "Про нас",
   },
   {
-    to: "/visa",
     label: "Послуги",
+    children: [
+      { to: "/visa", label: "Візи" },
+      { to: "/countries", label: "Країни" },
+      { to: "/coaching", label: "Коучинг" },
+      { to: "/pricing-tables", label: "Ціни" },
+    ],
   },
   {
     to: "/success-story",
@@ -28,12 +33,9 @@ const navLinks = [
   {
     label: "Сторінки",
     children: [
-      { to: "/countries", label: "Країни" },
       { to: "/team", label: "Команда" },
       { to: "/faq", label: "FAQ" },
       { to: "/gallery", label: "Галерея" },
-      { to: "/coaching", label: "Коучинг" },
-      { to: "/pricing-tables", label: "Ціни" },
     ],
   },
   {

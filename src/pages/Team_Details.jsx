@@ -1,4 +1,3 @@
-// src/pages/TeamDetails.jsx
 import { useParams, Link } from "react-router-dom";
 import HeroCommon from "../components/HeroCommon";
 import { getTeamMemberById } from "../data/teamData";
@@ -42,7 +41,10 @@ function TeamDetails() {
 
   return (
     <div className="bg-[#F4F8F2] min-h-screen">
-      <HeroCommon title="Team Details" breadcrumb={`Головна / Команда`} />
+      <HeroCommon
+        title="Профіль учасника команди"
+        breadcrumb={`Головна / Команда`}
+      />
 
       <section className="w-11/12 max-w-6xl mx-auto py-12 lg:py-16 space-y-10">
         {/* Верхній блок: фото + основна інформація */}
