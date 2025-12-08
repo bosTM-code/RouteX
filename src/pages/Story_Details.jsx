@@ -88,7 +88,7 @@ function StoryDetails() {
             {/* декоративна пунктирна стрілка зверху */}
             <img
               src={ArrowBroken}
-              alt=""
+              alt="Пунктирна стрілка"
               className="absolute -top-6 right-12 w-16 opacity-60"
             />
 

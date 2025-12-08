@@ -17,9 +17,10 @@ const navLinks = [
     label: "Послуги",
     children: [
       { to: "/visa", label: "Візи" },
+      { to: "/visa-offers", label: "Візові пропозиції" },
       { to: "/countries", label: "Країни" },
       { to: "/coaching", label: "Коучинг" },
-      { to: "/pricing-tables", label: "Ціни" },
+      { to: "/pricing-tables", label: "Тарифи консалтингу" },
     ],
   },
   {
